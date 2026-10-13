@@ -1,0 +1,1035 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#441522" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="A royal wedding invitation for Shivam Raj Sahu and Shweta Gupta. Join us for our cherished family celebrations in October and November 2026." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shivam Raj Sahu & Shweta Gupta — Wedding Invitation" />
+  <meta property="og:description" content="With the blessings of our families, we invite you to celebrate our wedding and cherished family occasions." />
+  <meta property="og:image" content="assets/share-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="assets/share-cover.png" />
+  <title>Shivam & Shweta — Sunehri Shaam</title>
+  <style>
+    :root {
+      --wine: #441522;
+      --wine-2: #602535;
+      --wine-3: #7e3840;
+      --gold: #c8a363;
+      --gold-light: #e7ce95;
+      --gold-dim: #987343;
+      --ivory: #f8f0e4;
+      --ivory-2: #efe2ce;
+      --ink: #352329;
+      --muted: #79656a;
+      --green: #237a51;
+      --shadow: 0 24px 70px rgba(44, 15, 25, .13);
+      --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 82px; background: var(--ivory); }
+    body { margin: 0; background: var(--ivory); color: var(--ink); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    body.locked { overflow: hidden; }
+    button, a { font: inherit; }
+    button { cursor: pointer; }
+    a { color: inherit; }
+    button:focus-visible, a:focus-visible { outline: 3px solid #e2bc70; outline-offset: 3px; }
+    ::selection { background: #e8d29f; color: var(--wine); }
+    .eyebrow { text-transform: uppercase; letter-spacing: .21em; font-size: .67rem; font-weight: 700; }
+    .section-kicker { color: var(--gold-dim); margin: 0 0 .6rem; }
+    .section-title { font-family: var(--serif); font-weight: 500; line-height: 1.12; font-size: clamp(2rem, 7vw, 3.25rem); margin: 0; color: var(--wine); }
+    .section-intro { max-width: 590px; color: var(--muted); margin: .9rem auto 0; font-size: .98rem; }
+    .center { text-align: center; }
+    .ornament-divider { display: flex; gap: .7rem; align-items: center; justify-content: center; color: var(--gold); width: min(260px, 80%); margin: 1.5rem auto; }
+    .ornament-divider::before, .ornament-divider::after { content: ""; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, var(--gold)); }
+    .ornament-divider::after { transform: scaleX(-1); }
+    .ornament-divider span { font-size: 1rem; }
+    .petals { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+    .petal { position: absolute; top: -10%; width: 11px; height: 17px; border-radius: 75% 10% 75% 10%; background: linear-gradient(145deg, #f7dfb0, #b88a4a); opacity: .72; animation: fall var(--dur, 11s) linear infinite; animation-delay: var(--delay, 0s); transform: rotate(28deg); }
+    .petal:nth-child(1) { left: 8%; --dur: 12s; --delay: -5s; }
+    .petal:nth-child(2) { left: 19%; --dur: 15s; --delay: -9s; scale: .75; }
+    .petal:nth-child(3) { left: 35%; --dur: 10s; --delay: -2s; scale: 1.15; }
+    .petal:nth-child(4) { left: 52%; --dur: 14s; --delay: -7s; }
+    .petal:nth-child(5) { left: 69%; --dur: 11s; --delay: -4s; scale: .8; }
+    .petal:nth-child(6) { left: 84%; --dur: 16s; --delay: -12s; scale: 1.1; }
+    .petal:nth-child(7) { left: 94%; --dur: 13s; --delay: -6s; scale: .7; }
+    @keyframes fall { 0% { transform: translate3d(0,-10vh,0) rotate(0); } 100% { transform: translate3d(26px,115vh,0) rotate(560deg); } }
+
+    /* Opening card */
+    .intro-screen { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; overflow: hidden; background: var(--wine); color: var(--ivory); transition: opacity .8s ease, visibility .8s ease; }
+    .intro-screen.is-open { opacity: 0; visibility: hidden; pointer-events: none; }
+    .intro-halo { position: absolute; width: min(84vw, 520px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(200,163,99,.16), rgba(200,163,99,0) 67%); }
+    .intro-arch { position: absolute; width: min(86vw, 500px); height: min(110vw, 600px); max-height: 80vh; border: 1px solid rgba(200,163,99,.7); border-radius: 50% 50% 0 0 / 36% 36% 0 0; bottom: -8%; box-shadow: inset 0 0 0 11px rgba(200,163,99,.045), inset 0 0 0 12px rgba(200,163,99,.3); }
+    .intro-arch::before { content: ""; position: absolute; inset: 13px; border: 1px solid rgba(200,163,99,.38); border-radius: inherit; }
+    .intro-content { position: relative; z-index: 4; width: min(88vw, 460px); text-align: center; padding: 2rem 1rem 3.5rem; transition: transform .65s ease, opacity .45s ease; }
+    .intro-seal { width: 94px; height: 94px; margin: 1.3rem auto 1.6rem; border: 1px solid var(--gold); border-radius: 50%; display: grid; place-items: center; color: var(--gold-light); font: 1.7rem var(--serif); box-shadow: 0 0 0 6px rgba(200,163,99,.08), 0 0 40px rgba(200,163,99,.12); position: relative; }
+    .intro-seal::before, .intro-seal::after { content: "✦"; position: absolute; color: var(--gold); font-size: .8rem; top: 50%; transform: translateY(-50%); }
+    .intro-seal::before { left: -21px; } .intro-seal::after { right: -21px; }
+    .intro-heading { font-family: var(--serif); font-weight: 400; font-size: clamp(2.5rem, 10vw, 4.5rem); line-height: 1.03; margin: .5rem 0; }
+    .intro-sub { color: #d7bd8d; font-size: .77rem; letter-spacing: .17em; text-transform: uppercase; }
+    .open-button { margin-top: 2rem; display: inline-flex; flex-direction: column; align-items: center; gap: .35rem; padding: .82rem 1.55rem; min-width: 188px; color: var(--ivory); border: 1px solid var(--gold); border-radius: 2px; background: rgba(255,255,255,.035); transition: background .25s, transform .25s; }
+    .open-button:hover { background: rgba(200,163,99,.13); transform: translateY(-2px); }
+    .open-button strong { font-weight: 600; letter-spacing: .07em; font-size: .88rem; }
+    .open-button span { font-size: .78rem; color: var(--gold-light); }
+    .curtain { position: absolute; inset: 0 auto 0 0; width: 51%; z-index: 3; pointer-events: none; background: repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 2px, transparent 2px 10px), linear-gradient(90deg, #2e0b16, #5a1c2d 48%, #441522); box-shadow: inset -16px 0 32px rgba(15,4,8,.22); transition: transform 1.25s cubic-bezier(.76,0,.24,1); }
+    .curtain.right { left: auto; right: 0; transform-origin: right; background: repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 2px, transparent 2px 10px), linear-gradient(90deg, #441522, #5a1c2d 52%, #2e0b16); box-shadow: inset 16px 0 32px rgba(15,4,8,.22); }
+    .intro-screen.is-opening .curtain.left { transform: translateX(-102%); }
+    .intro-screen.is-opening .curtain.right { transform: translateX(102%); }
+    .intro-screen.is-opening .intro-content { opacity: 0; transform: scale(.96); }
+    .skip-link { position: absolute; bottom: max(1.2rem, env(safe-area-inset-bottom)); right: 1.1rem; z-index: 5; border: 0; color: #ebd9b7; background: transparent; font-size: .78rem; text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Controls */
+    .topbar { position: sticky; top: 0; z-index: 50; height: 66px; padding: .55rem clamp(1rem, 4vw, 2rem); display: flex; align-items: center; justify-content: space-between; gap: .5rem; background: rgba(68,21,34,.96); color: var(--ivory); border-bottom: 1px solid rgba(200,163,99,.42); backdrop-filter: blur(12px); }
+    .brand-mark { display: flex; align-items: center; gap: .65rem; min-width: 0; }
+    .brand-seal { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold-light); font: 1rem var(--serif); flex: 0 0 auto; }
+    .brand-name { font: 1rem var(--serif); white-space: nowrap; }
+    .brand-sub { display: block; color: #d6bd8d; font-size: .58rem; letter-spacing: .13em; text-transform: uppercase; margin-top: -2px; }
+    .controls { display: flex; align-items: center; gap: .4rem; }
+    .icon-control, .language-control { color: var(--ivory); border: 1px solid rgba(200,163,99,.5); background: transparent; min-height: 38px; border-radius: 999px; padding: .42rem .7rem; font-size: .78rem; display: inline-flex; align-items: center; justify-content: center; gap: .35rem; }
+    .icon-control { width: 38px; padding: 0; font-size: 1rem; }
+    .icon-control[aria-pressed="true"] { background: rgba(200,163,99,.17); color: var(--gold-light); }
+    .language-control .active { color: var(--gold-light); font-weight: 700; }
+    .language-control .divider { opacity: .55; }
+    .nav-strip { position: sticky; top: 66px; z-index: 40; overflow-x: auto; display: flex; gap: .25rem; padding: .65rem 1rem; scrollbar-width: none; background: #f4e9d8; border-bottom: 1px solid rgba(152,115,67,.25); }
+    .nav-strip::-webkit-scrollbar { display: none; }
+    .nav-strip a { flex: 0 0 auto; padding: .45rem .75rem; text-decoration: none; color: #6e4d47; font-size: .78rem; border-radius: 999px; border: 1px solid transparent; white-space: nowrap; }
+    .nav-strip a:hover, .nav-strip a:focus-visible { border-color: #c7a66d; background: rgba(255,255,255,.58); }
+
+    /* Hero */
+    .hero { min-height: min(800px, calc(100svh - 110px)); position: relative; display: grid; place-items: center; padding: 4.2rem 1.25rem 4rem; overflow: hidden; background: radial-gradient(ellipse at 50% 34%, #692b3b 0, #441522 53%, #300d18 100%); color: var(--ivory); text-align: center; }
+    .hero::before { content: ""; position: absolute; inset: 18px; border: 1px solid rgba(200,163,99,.47); pointer-events: none; }
+    .hero::after { content: ""; position: absolute; inset: 27px; border: 1px solid rgba(200,163,99,.16); pointer-events: none; }
+    .hero-inner { position: relative; z-index: 2; width: min(100%, 690px); }
+    .hero-arch { position: absolute; width: min(88vw, 540px); height: 82%; top: 10%; border: 1px solid rgba(200,163,99,.55); border-bottom: 0; border-radius: 50% 50% 0 0 / 37% 37% 0 0; opacity: .42; }
+    .hero-arch::before { content: ""; position: absolute; inset: 12px 12px 0; border: 1px solid rgba(200,163,99,.36); border-bottom: 0; border-radius: inherit; }
+    .hero-arch::after { content: "✧"; position: absolute; left: 50%; top: 11%; transform: translateX(-50%); color: var(--gold); font-size: 2rem; }
+    .hero-monogram { display: grid; place-items: center; width: 76px; height: 76px; border: 1px solid var(--gold); border-radius: 50%; margin: 1.25rem auto 1.4rem; color: var(--gold-light); font: 1.45rem var(--serif); box-shadow: 0 0 0 7px rgba(200,163,99,.05); }
+    .hero-kicker { color: var(--gold-light); margin-bottom: .8rem; }
+    .hero h1 { font: 400 clamp(2.65rem, 10vw, 5.6rem)/.99 var(--serif); margin: 0; letter-spacing: -.035em; }
+    .hero-and { color: var(--gold); font: italic clamp(1.2rem, 4vw, 1.7rem) var(--serif); margin: .65rem 0; }
+    .hero-hindi { color: #e8d5b2; font-family: var(--serif); font-size: clamp(1.15rem, 4.2vw, 1.7rem); margin: 1rem 0 .3rem; }
+    .hero-date { color: var(--gold-light); font-size: .82rem; letter-spacing: .18em; margin-top: 1.45rem; }
+    .hero-tagline { color: rgba(248,240,228,.76); font: italic 1.08rem var(--serif); margin: 1rem 0 0; }
+    .hero-scroll { display: inline-flex; margin-top: 2.25rem; gap: .55rem; align-items: center; color: #e7d3ad; text-decoration: none; font-size: .75rem; letter-spacing: .08em; }
+    .hero-scroll .arrow { display: inline-grid; place-items: center; width: 27px; height: 27px; border: 1px solid rgba(200,163,99,.7); border-radius: 50%; animation: bob 2s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+
+    /* Sections */
+    .section { padding: clamp(3.7rem, 10vw, 6.6rem) clamp(1.1rem, 5vw, 2.4rem); }
+    .section-inner { width: min(100%, 1030px); margin: 0 auto; }
+    .invitation-section { position: relative; background: var(--ivory); overflow: hidden; }
+    .invitation-section::before, .invitation-section::after { content: "✧"; position: absolute; color: rgba(200,163,99,.32); font-size: 9rem; line-height: 1; pointer-events: none; }
+    .invitation-section::before { top: 15px; left: -22px; } .invitation-section::after { bottom: 0; right: -22px; }
+    .invitation-paper { position: relative; max-width: 790px; margin: 0 auto; padding: clamp(1.5rem, 5vw, 3.2rem); border: 1px solid #d7c49d; outline: 1px solid rgba(200,163,99,.3); outline-offset: 6px; background: rgba(255,253,248,.52); text-align: center; box-shadow: var(--shadow); }
+    .invitation-copy { max-width: 620px; margin: 1.5rem auto; color: #574249; font: 1.07rem/1.95 var(--serif); }
+    .family-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+    .family-card { border: 1px solid #dfceb0; background: #fcf8f1; padding: 1.4rem 1rem; text-align: center; }
+    .family-card h3 { margin: .45rem 0; color: var(--wine); font: 1.5rem var(--serif); }
+    .family-card p { margin: .2rem 0 0; color: var(--muted); font-size: .9rem; }
+    .family-tag { color: var(--gold-dim); font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 700; }
+    .countdown-section { position: relative; overflow: hidden; background: linear-gradient(135deg, #4a1725, #2f0d17); color: var(--ivory); text-align: center; }
+    .countdown-section .section-title { color: var(--ivory); }
+    .countdown-section .section-kicker { color: var(--gold-light); }
+    .countdown-section .section-intro { color: #dcc7c4; }
+    .countdown-wrap { position: relative; z-index: 1; max-width: 670px; margin: 2rem auto 0; border: 1px solid rgba(200,163,99,.6); padding: clamp(1rem, 4vw, 2rem); background: rgba(255,255,255,.025); }
+    .countdown-label { color: var(--gold-light); letter-spacing: .11em; font-size: .75rem; text-transform: uppercase; }
+    .countdown-event { font: 1.65rem var(--serif); margin: .4rem 0 1.3rem; }
+    .countdown-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .55rem; }
+    .time-unit { border: 1px solid rgba(200,163,99,.4); padding: .75rem .25rem; background: rgba(200,163,99,.06); }
+    .time-number { display: block; color: #fff3df; font: clamp(1.55rem, 6vw, 2.5rem)/1.2 var(--serif); font-variant-numeric: tabular-nums; }
+    .time-label { display: block; color: #d8bc82; margin-top: .35rem; font-size: .61rem; letter-spacing: .12em; text-transform: uppercase; }
+    .countdown-date { margin: 1rem 0 0; color: #e1ccc1; font-size: .85rem; }
+
+    .events-section { background: #f2e7d7; }
+    .events-header { text-align: center; margin-bottom: 2.2rem; }
+    .events-list { position: relative; display: grid; gap: 1.15rem; max-width: 780px; margin: 0 auto; }
+    .event-card { position: relative; overflow: hidden; display: grid; grid-template-columns: 76px 1fr; gap: 1rem; padding: 1.15rem; background: #fcf8f1; border: 1px solid #dfceb1; box-shadow: 0 9px 26px rgba(68,21,34,.045); transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease; }
+    .event-card:hover { transform: translateY(-3px); box-shadow: 0 15px 36px rgba(68,21,34,.1); border-color: #c5a363; }
+    .event-card.featured { border-color: #b58b49; background: linear-gradient(115deg, #fffaf1, #f7eddb); }
+    .event-card.featured::after { content: ""; position: absolute; right: -36px; top: -38px; width: 90px; height: 90px; border: 1px solid rgba(200,163,99,.45); border-radius: 50%; box-shadow: 0 0 0 8px rgba(200,163,99,.05), 0 0 0 16px rgba(200,163,99,.04); }
+    .event-symbol { position: relative; z-index: 1; display: grid; place-items: center; align-self: start; aspect-ratio: 1; border-radius: 50%; background: #f0e1c8; color: var(--wine); font-size: 1.6rem; border: 1px solid #dec492; }
+    .event-content { min-width: 0; }
+    .event-date { color: var(--gold-dim); text-transform: uppercase; letter-spacing: .12em; font-size: .67rem; font-weight: 800; }
+    .event-title { color: var(--wine); font: 1.48rem/1.18 var(--serif); margin: .18rem 0 .55rem; position: relative; z-index: 1; }
+    .event-time { color: #7a4e47; font-size: .8rem; margin: -.28rem 0 .5rem; }
+    .event-venue { display: flex; align-items: flex-start; gap: .4rem; color: #735f61; font-size: .83rem; line-height: 1.5; }
+    .event-venue svg { flex: 0 0 16px; margin-top: 2px; color: #a77e46; }
+    .event-tagline { font: italic .94rem var(--serif); color: #9a7444; margin: .6rem 0 0; }
+    .event-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .9rem; }
+    .small-action { display: inline-flex; align-items: center; justify-content: center; gap: .35rem; min-height: 36px; padding: .45rem .72rem; border: 1px solid #c8af80; background: transparent; color: var(--wine); font-size: .73rem; text-decoration: none; transition: background .2s; }
+    .small-action:hover { background: #f1e2c8; }
+    .event-note { text-align: center; margin: 1.35rem auto 0; color: var(--muted); font-size: .78rem; max-width: 560px; }
+
+    .wedding-feature { position: relative; overflow: hidden; padding: 0; color: var(--ivory); background: var(--wine); }
+    .wedding-feature-inner { position: relative; isolation: isolate; width: min(100%, 1100px); margin: auto; padding: clamp(4rem, 12vw, 7.5rem) 1.3rem; text-align: center; }
+    .wedding-feature-inner::before { content: ""; position: absolute; z-index: -1; top: 10%; bottom: 10%; left: 50%; transform: translateX(-50%); width: min(85%, 440px); border: 1px solid rgba(200,163,99,.55); border-bottom: 0; border-radius: 50% 50% 0 0 / 32% 32% 0 0; }
+    .mandap-art { display: block; width: min(100%, 400px); margin: 0 auto 1rem; filter: drop-shadow(0 0 18px rgba(200,163,99,.15)); }
+    .wedding-feature .section-title { color: #fff0d4; }
+    .wedding-feature .section-kicker { color: var(--gold-light); }
+    .wedding-feature .section-intro { color: #ddc4c4; }
+    .wedding-meta { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .65rem 1rem; color: #e3c99a; margin: 1.45rem auto; font-size: .86rem; }
+    .wedding-meta span { display: inline-flex; align-items: center; gap: .4rem; }
+    .gold-button { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 46px; padding: .75rem 1.25rem; background: var(--gold); border: 1px solid var(--gold-light); color: #36101b; font-weight: 700; font-size: .84rem; text-decoration: none; box-shadow: 0 8px 22px rgba(0,0,0,.1); transition: transform .2s, background .2s; }
+    .gold-button:hover { transform: translateY(-2px); background: #d9b873; }
+
+    .directions-section { background: var(--ivory); }
+    .venue-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+    .venue-card { padding: 1.5rem; border: 1px solid #dfceb1; background: #fffbf5; }
+    .venue-icon { display: grid; place-items: center; width: 48px; height: 48px; background: #f0e1c8; border: 1px solid #dfc18e; border-radius: 50%; color: var(--wine); font-size: 1.2rem; }
+    .venue-card h3 { color: var(--wine); font: 1.6rem var(--serif); margin: .8rem 0 .3rem; }
+    .venue-card p { color: var(--muted); margin: .35rem 0 1rem; font-size: .9rem; }
+    .venue-events { color: #997343; font-size: .76rem; font-weight: 700; }
+    .map-disclaimer { color: #88787a; margin: 1rem auto 0; max-width: 700px; text-align: center; font-size: .78rem; }
+
+    .rsvp-section { position: relative; overflow: hidden; background: radial-gradient(ellipse at top, #61283a, #441522 58%, #300d18); color: var(--ivory); text-align: center; }
+    .rsvp-frame { position: relative; z-index: 1; max-width: 750px; margin: 0 auto; padding: clamp(1.6rem, 5vw, 3.2rem); border: 1px solid rgba(200,163,99,.62); outline: 1px solid rgba(200,163,99,.22); outline-offset: 7px; }
+    .rsvp-frame .section-title { color: #fff0d4; }
+    .rsvp-frame .section-intro { color: #e0c9c9; }
+    .rsvp-hindi { color: var(--gold-light); font: 1.2rem var(--serif); margin: 1rem 0; }
+    .whatsapp-button { display: inline-flex; align-items: center; justify-content: center; gap: .65rem; width: min(100%, 330px); min-height: 52px; padding: .9rem 1rem; margin-top: 1rem; background: var(--green); color: white; border: 1px solid #58a77f; text-decoration: none; font-weight: 700; box-shadow: 0 8px 24px rgba(0,0,0,.14); transition: transform .2s, background .2s; }
+    .whatsapp-button:hover { transform: translateY(-2px); background: #1c6b46; }
+    .contact-line { color: #d9bd88; font-size: .82rem; margin-top: .7rem; }
+    .secondary-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .65rem; margin-top: 1rem; }
+    .outline-button { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; min-height: 40px; padding: .6rem .9rem; background: transparent; border: 1px solid rgba(200,163,99,.55); color: #f0ddbb; text-decoration: none; font-size: .78rem; }
+    .footer { padding: 2rem 1rem 5.7rem; background: #2c0b15; text-align: center; color: #d4b987; font: italic 1rem var(--serif); }
+    .footer small { display: block; margin-top: .7rem; font: .68rem var(--sans); letter-spacing: .1em; color: #aa8c79; }
+
+    .floating-rsvp { position: fixed; z-index: 35; right: 14px; bottom: max(14px, env(safe-area-inset-bottom)); display: inline-flex; align-items: center; justify-content: center; gap: .45rem; min-height: 46px; border-radius: 999px; padding: .65rem 1rem; color: #fff; text-decoration: none; background: var(--green); box-shadow: 0 8px 30px rgba(36,63,46,.26); font-size: .8rem; font-weight: 750; border: 1px solid rgba(255,255,255,.22); transition: transform .25s, opacity .25s; }
+    .floating-rsvp:hover { transform: translateY(-2px); }
+    .floating-rsvp.hidden { opacity: 0; pointer-events: none; transform: translateY(12px); }
+    .toast { position: fixed; z-index: 1200; bottom: 80px; left: 50%; transform: translate(-50%, 18px); max-width: calc(100vw - 32px); border: 1px solid var(--gold); background: var(--wine); color: var(--ivory); padding: .75rem 1rem; text-align: center; font-size: .82rem; box-shadow: var(--shadow); opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.65,.2,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (min-width: 680px) {
+      .family-grid { grid-template-columns: repeat(2, 1fr); }
+      .venue-grid { grid-template-columns: repeat(2, 1fr); }
+      .event-card { grid-template-columns: 90px 1fr; padding: 1.4rem; gap: 1.2rem; }
+      .event-symbol { font-size: 1.8rem; }
+      .event-title { font-size: 1.7rem; }
+      .invitation-copy { font-size: 1.15rem; }
+    }
+    @media (max-width: 390px) {
+      .topbar { padding-inline: .7rem; }
+      .brand-name { font-size: .9rem; }
+      .brand-sub { font-size: .52rem; }
+      .language-control { padding-inline: .5rem; }
+      .nav-strip { padding-inline: .5rem; }
+      .event-card { grid-template-columns: 60px 1fr; gap: .75rem; padding: .9rem; }
+      .event-symbol { font-size: 1.3rem; }
+      .event-title { font-size: 1.28rem; }
+      .small-action { padding: .4rem .55rem; font-size: .68rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+
+    /* Immersive visual direction: layered artwork, depth, and gentle 3D motion */
+    .intro-scene { position:absolute; inset:-3%; z-index:0; background:radial-gradient(ellipse at 50% 42%,rgba(139,83,70,.28),transparent 47%),linear-gradient(180deg,#34101d 0%,#441522 58%,#2b0b16 100%); opacity:.83; transform:scale(1.03); animation:sceneDrift 19s ease-in-out infinite alternate; }
+    .intro-screen::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none; background:radial-gradient(ellipse at 50% 38%,transparent 0,rgba(22,3,10,.25) 70%,rgba(22,3,10,.7) 100%); }
+    .intro-halo { z-index:1; } .intro-arch { z-index:1; } .intro-content { z-index:4; } .curtain { z-index:5; } .skip-link { z-index:6; }
+    .hero { isolation:isolate; }
+    .hero-visual-layer { position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; perspective:1000px; }
+    .hero-visual-layer::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(48,10,23,.55),rgba(53,12,25,.72) 54%,#300d18 100%),linear-gradient(90deg,rgba(40,8,18,.5),transparent 46%,rgba(40,8,18,.4)); }
+    .hero-visual-layer img { width:100%; height:100%; object-fit:cover; object-position:center 43%; display:block; opacity:.7; transform:scale(1.06) translateZ(-25px); filter:saturate(.9) contrast(1.03); animation:heroDrift 23s ease-in-out infinite alternate; }
+    .hero-inner { text-shadow:0 2px 22px rgba(21,4,10,.25); }
+    @keyframes sceneDrift { from { transform:scale(1.03) translate3d(-.5%,0,0); } to { transform:scale(1.11) translate3d(.5%,-1%,0); } }
+    @keyframes heroDrift { from { transform:scale(1.06) translate3d(-.4%,0,-25px); } to { transform:scale(1.14) translate3d(.5%,-1%,-25px); } }
+    .invitation-paper { backdrop-filter:blur(2px); border-radius:4px; }
+    .family-card { position:relative; overflow:hidden; border-radius:4px; box-shadow:0 10px 24px rgba(68,21,34,.055); }
+    .family-card::before { content:"✧"; display:block; font-size:1.5rem; color:var(--gold); margin-bottom:.25rem; opacity:.85; }
+    .events-list { grid-template-columns:1fr; gap:1.2rem; max-width:880px; perspective:1400px; }
+    .event-card { display:flex; flex-direction:column; padding:0; gap:0; border-radius:9px; overflow:hidden; transform-style:preserve-3d; perspective:1000px; box-shadow:0 14px 36px rgba(68,21,34,.09); }
+    .event-card:hover { transform:translateY(-5px) rotateX(.8deg); box-shadow:0 22px 46px rgba(68,21,34,.15); }
+    .event-card.featured { border-color:#b58b49; background:linear-gradient(120deg,#fffaf1,#f7eddb); }
+    .event-art-wrap { position:relative; isolation:isolate; height:190px; overflow:hidden; background:#36101b; transform-style:preserve-3d; }
+    .event-art { display:block; width:100%; height:100%; object-fit:cover; object-position:center 52%; transform:scale(1.02) translateZ(0); transition:transform 1.1s cubic-bezier(.2,.65,.2,1),filter .6s; filter:saturate(1.05) contrast(1.02); }
+    .event-card:hover .event-art { transform:scale(1.09) translateZ(18px); filter:saturate(1.15) contrast(1.04); }
+    .event-art-wash { position:absolute; inset:0; z-index:1; background:linear-gradient(180deg,rgba(25,7,14,.04),rgba(36,7,16,.08) 36%,rgba(36,7,16,.64)); pointer-events:none; }
+    .event-art-index { position:absolute; z-index:2; left:1rem; top:1rem; color:#fff2d7; border:1px solid rgba(231,206,149,.78); background:rgba(51,12,25,.56); backdrop-filter:blur(6px); padding:.38rem .58rem; font:.76rem var(--serif); letter-spacing:.07em; border-radius:2px; }
+    .event-art-index i { color:#e3c78e; font-style:normal; font-size:.62rem; }
+    .event-art-symbol { position:absolute; z-index:2; right:1rem; bottom:.75rem; font:2rem var(--serif); color:#f4d99f; filter:drop-shadow(0 2px 8px rgba(0,0,0,.45)); }
+    .main-event-badge { position:absolute; z-index:3; right:.7rem; top:.7rem; color:#3c1420; background:linear-gradient(135deg,#efdbad,#c39a51); border:1px solid #f5e3b3; padding:.35rem .56rem; text-transform:uppercase; letter-spacing:.08em; font-size:.6rem; font-weight:800; }
+    .event-content { padding:1.05rem 1.15rem 1.2rem; min-width:0; }
+    .event-date { display:inline-block; padding:.26rem .5rem; border-left:2px solid var(--gold); background:#f4e7d1; letter-spacing:.08em; }
+    .event-title { font-size:1.55rem; margin:.65rem 0 .55rem; }
+    .tilak-art-treatment .event-art { filter:sepia(.2) saturate(1.22) hue-rotate(315deg) contrast(1.06); }
+    .wedding-feature { isolation:isolate; }
+    .wedding-scene-layer { position:absolute; z-index:-1; inset:0; overflow:hidden; pointer-events:none; }
+    .wedding-scene-layer img { width:100%; height:100%; object-fit:cover; object-position:center 48%; opacity:.32; filter:saturate(.95); transform:scale(1.04); animation:heroDrift 26s ease-in-out infinite alternate; }
+    .wedding-feature::after { content:""; position:absolute; z-index:-1; inset:0; background:linear-gradient(180deg,rgba(51,13,25,.8),rgba(68,21,34,.7) 45%,rgba(39,8,17,.88)); pointer-events:none; }
+    .wedding-feature-inner { perspective:1400px; }
+    .mandap-3d-wrap { position:relative; width:min(100%,560px); height:clamp(210px,56vw,350px); margin:0 auto 2rem; perspective:1100px; transform-style:preserve-3d; animation:mandapFloat 7s ease-in-out infinite; }
+    .mandap-render { position:relative; z-index:2; display:block; width:100%; height:100%; object-fit:cover; object-position:center 43%; border:1px solid rgba(231,206,149,.72); border-radius:8px; box-shadow:0 28px 55px rgba(0,0,0,.34),0 0 0 7px rgba(200,163,99,.06),0 0 40px rgba(200,163,99,.15); transform:rotateX(3deg) rotateY(-2deg) translateZ(20px); transition:transform .7s; }
+    .mandap-3d-wrap:hover .mandap-render { transform:rotateX(0) rotateY(0) translateZ(32px) scale(1.015); }
+    .mandap-aura { position:absolute; z-index:0; inset:12% 10%; background:radial-gradient(ellipse,rgba(226,177,83,.38),transparent 70%); filter:blur(22px); transform:translateZ(-35px); }
+    .mandap-side { position:absolute; z-index:1; top:14%; bottom:10%; width:12%; border:1px solid rgba(231,206,149,.45); background:linear-gradient(90deg,rgba(200,163,99,.0),rgba(200,163,99,.22),rgba(200,163,99,.02)); transform:translateZ(-8px) rotateY(30deg); }
+    .mandap-side-left { left:1%; } .mandap-side-right { right:1%; transform:translateZ(-8px) rotateY(-30deg); }
+    .mandap-plinth { position:absolute; z-index:1; height:18px; left:5%; right:5%; bottom:1%; background:linear-gradient(90deg,transparent,rgba(200,163,99,.65),rgba(231,206,149,.85),rgba(200,163,99,.65),transparent); transform:rotateX(72deg) translateZ(-12px); filter:blur(.5px); }
+    .mandap-spark { position:absolute; z-index:4; color:#f1d591; font-size:1.25rem; animation:sparkle 3.4s ease-in-out infinite; text-shadow:0 0 14px rgba(231,206,149,.65); }
+    .mandap-spark-one { top:10%; left:8%; } .mandap-spark-two { right:9%; bottom:18%; animation-delay:1.1s; }
+    @keyframes mandapFloat { 0%,100% { transform:translateY(0) rotateX(0deg); } 50% { transform:translateY(-7px) rotateX(.5deg); } }
+    @keyframes sparkle { 0%,100% { opacity:.4; transform:scale(.8) rotate(0deg); } 50% { opacity:1; transform:scale(1.12) rotate(18deg); } }
+    .venue-card { position:relative; overflow:hidden; border-radius:6px; box-shadow:0 12px 32px rgba(68,21,34,.07); }
+    .venue-card::after { content:""; position:absolute; pointer-events:none; right:-28px; bottom:-36px; width:130px; height:130px; border:1px solid rgba(200,163,99,.28); border-radius:50%; box-shadow:0 0 0 10px rgba(200,163,99,.045),0 0 0 20px rgba(200,163,99,.035); }
+    .rsvp-frame { background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.005)); backdrop-filter:blur(3px); border-radius:5px; }
+    .rsvp-visual { display:flex; align-items:center; justify-content:center; gap:.8rem; margin:0 auto 1.1rem; color:var(--gold-light); }
+    .rsvp-ornament { font:2.3rem var(--serif); opacity:.8; } .rsvp-monogram { display:grid; place-items:center; width:60px; height:60px; border:1px solid rgba(231,206,149,.75); border-radius:50%; box-shadow:0 0 0 6px rgba(200,163,99,.055); font:1.25rem var(--serif); } .rsvp-monogram i { color:var(--gold-light); font-size:.8rem; }
+    .rsvp-form { margin:2rem auto 0; text-align:left; display:grid; gap:1.25rem; }
+    .form-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
+    .form-field { display:grid; gap:.48rem; color:#f8ead0; font-size:.82rem; min-width:0; }
+    .form-field > span, .form-fieldset legend { font-size:.82rem; font-weight:700; color:#fff0d4; line-height:1.5; }
+    .form-field b, .form-fieldset legend span { font-weight:400; color:#d8bd8e; }
+    .form-field em, .form-fieldset em { color:#f2bd91; font-style:normal; }
+    .form-field input, .form-field textarea { width:100%; min-height:46px; border:1px solid rgba(231,206,149,.47); border-radius:3px; padding:.75rem .82rem; color:#44202b; background:#fff8ec; font:inherit; outline:none; transition:border-color .2s,box-shadow .2s; }
+    .form-field textarea { min-height:95px; resize:vertical; }
+    .form-field input:focus, .form-field textarea:focus { border-color:#f1d591; box-shadow:0 0 0 3px rgba(231,206,149,.13); }
+    .form-field input:disabled { opacity:.55; }
+    .form-fieldset { border:0; padding:0; margin:0; min-width:0; }
+    .form-fieldset legend { margin-bottom:.7rem; padding:0; }
+    .choice-grid { display:grid; grid-template-columns:1fr; gap:.5rem; }
+    .choice-card { display:flex; align-items:center; gap:.65rem; position:relative; padding:.7rem .75rem; min-height:60px; border:1px solid rgba(231,206,149,.38); background:rgba(255,255,255,.035); color:#faeccc; cursor:pointer; font-size:.79rem; transition:background .2s,border-color .2s,transform .2s; }
+    .choice-card:has(input:checked) { border-color:#d4b46d; background:rgba(200,163,99,.13); }
+    .choice-card input, .event-choice-grid input { accent-color:#c8a363; width:18px; height:18px; flex:0 0 auto; }
+    .choice-mark { display:grid; place-items:center; width:29px; height:29px; border:1px solid rgba(231,206,149,.5); border-radius:50%; font-size:.9rem; color:var(--gold-light); flex:0 0 auto; }
+    .choice-card small { display:block; margin-top:.12rem; font-size:.72rem; color:#d9bd88; }
+    .event-choice-grid { display:grid; grid-template-columns:1fr; gap:.45rem; }
+    .event-choice-grid label { display:flex; align-items:center; gap:.55rem; border:1px solid rgba(231,206,149,.3); background:rgba(255,255,255,.025); padding:.62rem .68rem; min-height:47px; color:#faeccc; font-size:.78rem; cursor:pointer; }
+    .event-choice-grid label:has(input:checked) { border-color:#d6b875; background:rgba(200,163,99,.12); }
+    .event-choice-grid small { display:block; color:#d7bd8d; font-size:.67rem; }
+    .rsvp-privacy { color:#d7bdad; font-size:.74rem; line-height:1.65; margin:0; padding:.8rem; border-left:2px solid rgba(200,163,99,.65); background:rgba(0,0,0,.08); }
+    .whatsapp-button { font-size:.88rem; border-radius:3px; width:100%; margin-top:0; border:1px solid #55a67e; box-shadow:0 9px 25px rgba(0,0,0,.15); }
+    .wa-icon { font-size:1.2rem; } .rsvp-form-status { margin:0; min-height:0; color:#f4dfb5; font-size:.8rem; text-align:center; }
+    .rsvp-fallback-link { color:#fff0d4; text-align:center; text-decoration:underline; text-underline-offset:3px; font-size:.86rem; } .rsvp-fallback-link[hidden] { display:none; }
+    .floating-rsvp { box-shadow:0 10px 35px rgba(36,63,46,.38); }
+    .reveal.visible.event-card { transform:translateY(0) rotateX(0); }
+    @media (min-width:680px) {
+      .events-list { grid-template-columns:repeat(2,minmax(0,1fr)); max-width:1000px; align-items:stretch; }
+      .event-art-wrap { height:220px; } .event-content { padding:1.2rem 1.25rem 1.35rem; }
+      .form-grid { grid-template-columns:1fr 1fr; } .form-field-full { grid-column:1 / -1; }
+      .choice-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } .event-choice-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .rsvp-frame { max-width:820px; }
+    }
+    @media (max-width:390px) {
+      .event-art-wrap { height:170px; } .event-content { padding:.95rem; } .event-title { font-size:1.34rem; }
+      .mandap-3d-wrap { height:200px; } .rsvp-frame { padding:1.15rem; } .choice-card { padding:.6rem; }
+    }
+    @media (hover:none) { .event-card:hover { transform:none; } .event-card:hover .event-art { transform:scale(1.02); } }
+    @media (prefers-reduced-motion:reduce) { .intro-scene,.hero-visual-layer img,.wedding-scene-layer img,.mandap-3d-wrap,.mandap-spark { animation:none !important; } .event-card:hover .event-art { transform:none; } }
+
+
+    /* Refined editorial pass: restrained details, real photography, and scroll-led motion. */
+    :root {
+      --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+      --sans: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --ivory: #f8f4ed;
+      --ivory-2: #eee4d5;
+      --ink: #34272a;
+      --muted: #796b6b;
+      --shadow: 0 16px 40px rgba(49, 20, 28, .08);
+    }
+    [hidden] { display: none !important; }
+    .scroll-progress { position: fixed; z-index: 1400; top: 0; left: 0; width: 100%; height: 2px; background: var(--gold-light); transform: scaleX(0); transform-origin: left center; pointer-events: none; }
+    body { background: var(--ivory); color: var(--ink); }
+    .intro-screen { background: #35101d; }
+    .intro-scene { opacity: 1; background: radial-gradient(ellipse at 50% 40%, rgba(157,100,70,.22), transparent 45%), linear-gradient(155deg,#2d0c17 0%,#4b1b2a 53%,#2e0d18 100%); animation: none; }
+    .intro-halo { opacity: .55; }
+    .intro-arch { width: min(78vw,460px); border-color: rgba(200,163,99,.54); box-shadow: inset 0 0 0 9px rgba(200,163,99,.025), inset 0 0 0 10px rgba(200,163,99,.18); }
+    .curtain { background: linear-gradient(90deg,#260912,#4b1928 45%,#3a101e); box-shadow: inset -14px 0 28px rgba(15,4,8,.18); }
+    .curtain.right { background: linear-gradient(90deg,#3a101e,#4b1928 55%,#260912); box-shadow: inset 14px 0 28px rgba(15,4,8,.18); }
+    .topbar { height: 62px; padding-inline: clamp(1rem,4vw,2.25rem); box-shadow: 0 4px 22px rgba(27,7,15,.08); border-bottom-color: rgba(200,163,99,.26); }
+    .brand-seal { width: 34px; height: 34px; border-radius: 50%; }
+    .nav-strip { position: relative; top: auto; justify-content: center; padding: .35rem .75rem; background: #f8f4ed; border-bottom: 1px solid #e8dece; }
+    .nav-strip a { font-size: .75rem; padding: .35rem .68rem; color: #6e5558; }
+    .hero { height: min(850px, 88svh); min-height: 630px; padding: 4rem 1.25rem 3.8rem; background: #35101d; }
+    .hero::before { inset: 15px; border-color: rgba(231,206,149,.34); }
+    .hero::after { inset: 22px; border-color: rgba(231,206,149,.12); }
+    .hero-visual-layer img { opacity: .59; filter: saturate(.74) contrast(1.03); animation: none; transform: translate3d(0,var(--scroll-shift,0px),0) scale(1.12); will-change: transform; }
+    .hero-visual-layer::after { background: linear-gradient(180deg,rgba(38,8,19,.38),rgba(45,10,22,.46) 38%,#30101c 100%),linear-gradient(90deg,rgba(34,7,16,.23),transparent 45%,rgba(34,7,16,.28)); }
+    .hero-inner { max-width: 680px; }
+    .hero-monogram { width: 64px; height: 64px; box-shadow: none; }
+    .hero h1 { font-size: clamp(3.1rem,9vw,6.2rem); letter-spacing: -.045em; }
+    .hero-tagline { font-size: 1.16rem; }
+    .hero-scroll { letter-spacing: .14em; font-size: .65rem; }
+    .hero-scroll .arrow { animation-duration: 3s; }
+    .petal { opacity: .22; width: 7px; height: 12px; }
+    .petals .petal:nth-child(n+5) { display: none; }
+    .invitation-section::before, .invitation-section::after { display: none; }
+    .invitation-paper { border: 1px solid #dfd0b5; outline: none; box-shadow: none; background: rgba(255,253,248,.74); padding: clamp(1.7rem,5vw,3.5rem); }
+    .invitation-copy { font: 1.12rem/1.8 var(--serif); max-width: 650px; color: #4d3c3f; }
+    .ornament-divider { margin: 1.25rem auto; }
+    .family-grid { gap: 1rem; }
+    .family-card { border: 0; border-top: 1px solid #d9c8ad; border-bottom: 1px solid #d9c8ad; background: transparent; padding: 1.45rem 1rem; box-shadow: none; }
+    .family-card::before { display: none; }
+    .family-card h3 { font-size: 1.72rem; }
+    .countdown-section { background: #3c1220; }
+    .countdown-section .petals { opacity: .28; }
+    .countdown-wrap { border-color: rgba(200,163,99,.43); background: rgba(255,255,255,.018); }
+    .time-unit { background: transparent; border-color: rgba(200,163,99,.26); }
+    .events-section { background: #f6f1e8; }
+    .events-header { margin-bottom: 2rem; }
+    .events-list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.05rem; max-width: 1080px; perspective: none; }
+    .event-card { display: grid; grid-template-columns: minmax(112px,.74fr) minmax(0,1fr); min-height: 226px; padding: 0; gap: 0; border: 1px solid #e3d8c8; border-radius: 2px; background: #fdfbf7; box-shadow: 0 5px 18px rgba(42,19,25,.035); transform: translateY(18px); transition: opacity .65s ease,transform .65s cubic-bezier(.2,.65,.2,1),border-color .25s,box-shadow .25s; }
+    .event-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(42,19,25,.075); border-color: #ceb47f; }
+    .event-card.featured { background: #fbf4e7; border-color: #c3a266; }
+    .event-card.featured::after { display: none; }
+    .event-art-wrap { position: relative; min-width: 0; min-height: 100%; height: auto; overflow: hidden; background: #5b2630; }
+    .event-art { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; transform: translate3d(0,var(--parallax-shift,0px),0) scale(1.08); transition: transform .75s cubic-bezier(.2,.65,.2,1),filter .5s; filter: saturate(.84) contrast(1.015); will-change: transform; }
+    .event-card:hover .event-art { transform: translate3d(0,var(--parallax-shift,0px),0) scale(1.12); filter: saturate(.94) contrast(1.02); }
+    .event-art-wash { background: linear-gradient(180deg,rgba(30,8,15,.10),transparent 48%,rgba(30,8,15,.16)); }
+    .event-art-index { left: .65rem; top: .65rem; padding: .23rem .4rem; font-size: .68rem; border-color: rgba(248,240,228,.55); background: rgba(44,14,25,.58); backdrop-filter: blur(3px); }
+    .main-event-badge { top: .55rem; right: .55rem; padding: .28rem .42rem; font-size: .51rem; letter-spacing: .05em; box-shadow: 0 1px 7px rgba(0,0,0,.08); }
+    .event-art-symbol { display: none; }
+    .event-content { display: flex; flex-direction: column; padding: 1rem .9rem .95rem; min-width: 0; }
+    .event-date { align-self: flex-start; background: transparent; border-left: 0; padding: 0; color: #9c7843; letter-spacing: .065em; font-size: .64rem; line-height: 1.45; }
+    .event-title { font: 500 clamp(1.3rem,2.3vw,1.72rem)/1.05 var(--serif); margin: .46rem 0 .55rem; letter-spacing: -.02em; }
+    .event-time { color: #7a4e47; font-size: .75rem; margin: -.12rem 0 .5rem; }
+    .event-venue { font-size: .76rem; line-height: 1.42; gap: .3rem; }
+    .event-venue svg { flex-basis: 13px; width: 13px; height: 13px; }
+    .event-tagline { font: italic .88rem/1.3 var(--serif); margin: .55rem 0 0; color: #987448; }
+    .event-actions { gap: .38rem; margin-top: auto; padding-top: .75rem; }
+    .small-action { min-height: 32px; padding: .38rem .48rem; font-size: .66rem; border-color: #d8c49d; }
+    .reveal.visible.event-card { transform: translateY(0); }
+    .event-note { font-size: .76rem; max-width: 620px; }
+    .wedding-feature { background: #33101d; }
+    .wedding-scene-layer img { opacity: .25; filter: saturate(.68); animation: none; transform: translate3d(0,var(--parallax-shift,0px),0) scale(1.09); will-change: transform; }
+    .wedding-feature::after { background: linear-gradient(180deg,rgba(45,10,23,.81),rgba(49,12,25,.76) 46%,rgba(34,7,16,.89)); }
+    .wedding-feature-inner { padding: clamp(4rem,9vw,6.5rem) 1.3rem; }
+    .wedding-feature-inner::before { border-color: rgba(200,163,99,.25); }
+    .mandap-3d-wrap { height: auto; aspect-ratio: 16/9; width: min(100%,720px); margin-bottom: 2.2rem; animation: none; perspective: none; }
+    .mandap-aura,.mandap-side,.mandap-plinth,.mandap-spark { display: none; }
+    .mandap-render { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 1px solid rgba(231,206,149,.7); border-radius: 1px; box-shadow: 0 18px 44px rgba(0,0,0,.22); transform: translate3d(0,var(--parallax-shift,0px),0) scale(1.08); transition: transform .5s; filter: saturate(.82) contrast(1.02); }
+    .mandap-3d-wrap:hover .mandap-render { transform: translate3d(0,var(--parallax-shift,0px),0) scale(1.1); }
+    .venue-card { border-radius: 0; box-shadow: none; border: 1px solid #e3d8c8; background: #fdfbf7; }
+    .venue-card::after { display: none; }
+    .venue-icon { border-radius: 50%; border-color: #e2d0ae; }
+    .rsvp-section { background: #3c1220; }
+    .rsvp-section .petals { opacity: .22; }
+    .rsvp-frame { max-width: 640px; padding: clamp(1.4rem,4vw,2.7rem); border: 1px solid rgba(200,163,99,.48); outline: none; border-radius: 1px; background: rgba(255,255,255,.018); backdrop-filter: none; }
+    .rsvp-visual { margin-bottom: .7rem; }
+    .rsvp-monogram { width: 48px; height: 48px; box-shadow: none; }
+    .rsvp-form { margin-top: 1.55rem; gap: 1rem; }
+    .form-field { gap: .38rem; }
+    .form-field > span, .form-fieldset legend { font-size: .82rem; }
+    .form-field input,.form-field textarea,.form-field select { width: 100%; min-height: 48px; border: 1px solid rgba(231,206,149,.46); border-radius: 2px; padding: .72rem .8rem; color: #44202b; background: #fffaf1; font: inherit; outline: none; }
+    .form-field input:focus,.form-field textarea:focus,.form-field select:focus { border-color: #f1d591; box-shadow: 0 0 0 3px rgba(231,206,149,.1); }
+    .choice-grid-simple { grid-template-columns: repeat(2,minmax(0,1fr)); gap: .65rem; }
+    .choice-grid-simple .choice-card { min-height: 70px; padding: .72rem; border-radius: 2px; }
+    .choice-grid-simple .choice-card small { font-size: .7rem; }
+    .rsvp-privacy { padding: .7rem .8rem; background: transparent; border-left: 1px solid rgba(200,163,99,.42); }
+    .whatsapp-button { max-width: none; border-radius: 2px; box-shadow: none; }
+    .rsvp-form-status { margin-top: .2rem; }
+    #guestCountWrap[hidden], .rsvp-fallback-link[hidden] { display: none !important; }
+    .rsvp-fallback-link { margin-top: .25rem; }
+    .floating-rsvp { border-radius: 2px; box-shadow: 0 8px 24px rgba(36,63,46,.22); }
+    .footer { padding-bottom: 2rem; }
+    .footer small { letter-spacing: .08em; }
+    .reveal { transform: translateY(18px); transition-duration: .68s; }
+    .event-card.reveal { opacity: 0; }
+    .event-card.reveal.visible { opacity: 1; }
+    @media (min-width: 680px) {
+      .events-list { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .event-art-wrap { min-height: 230px; }
+      .event-content { padding: 1.1rem .95rem; }
+      .family-grid { gap: 2rem; }
+      .venue-grid { gap: 1.25rem; }
+    }
+    @media (max-width: 679px) {
+      .hero { height: min(790px,84svh); min-height: 620px; }
+      .events-list { grid-template-columns: 1fr; gap: .85rem; }
+      .event-card { grid-template-columns: 116px minmax(0,1fr); min-height: 204px; }
+      .event-content { padding: .88rem .82rem; }
+      .event-title { font-size: 1.42rem; }
+      .event-venue { font-size: .74rem; }
+      .event-tagline { font-size: .83rem; }
+      .event-actions { gap: .3rem; padding-top: .62rem; }
+      .small-action { font-size: .63rem; padding: .34rem .38rem; }
+      .nav-strip { justify-content: flex-start; }
+      .choice-grid-simple { grid-template-columns: 1fr; }
+      .choice-grid-simple .choice-card { min-height: 58px; }
+      .rsvp-frame { padding: 1.25rem 1rem; }
+      .intro-heading { font-size: clamp(2.8rem,10vw,4.1rem); }
+    }
+    @media (max-width: 370px) {
+      .brand-name { font-size: .85rem; }
+      .brand-sub { letter-spacing: .08em; }
+      .controls { gap: .25rem; }
+      .icon-control { width: 34px; min-height: 34px; }
+      .language-control { min-height: 34px; padding: .35rem .5rem; }
+      .event-card { grid-template-columns: 100px minmax(0,1fr); }
+      .event-content { padding: .72rem .68rem; }
+      .event-title { font-size: 1.28rem; }
+      .small-action { font-size: .59rem; }
+    }
+    @media (hover:none) {
+      .event-card:hover { transform: none; box-shadow: 0 5px 18px rgba(42,19,25,.035); }
+      .event-card:hover .event-art { transform: translate3d(0,var(--parallax-shift,0px),0) scale(1.08); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-progress { display: none; }
+      .intro-scene,.hero-visual-layer img,.wedding-scene-layer img,.mandap-3d-wrap,.mandap-spark { animation: none !important; }
+      .hero-visual-layer img,.wedding-scene-layer img,.event-art,.mandap-render { transform: none !important; }
+      .event-card,.reveal { opacity: 1 !important; transform: none !important; }
+    }
+  </style>
+</head>
+<body class="locked">
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="intro-screen" id="intro" aria-label="Wedding invitation opening">
+    <div class="intro-scene" aria-hidden="true"></div>
+    <div class="intro-halo"></div>
+    <div class="intro-arch" aria-hidden="true"></div>
+    <div class="intro-content">
+      <div class="eyebrow intro-sub" data-i18n="introKicker">A ROYAL CELEBRATION</div>
+      <div class="intro-seal" aria-hidden="true">S <span style="font-style:italic;color:#f0d79c">+</span> S</div>
+      <h1 class="intro-heading">Shivam<br><span style="font-style:italic;color:#d3af6a;font-size:.58em">&amp;</span><br>Shweta</h1>
+      <p class="intro-sub" data-i18n="introCaption">A beautiful new chapter begins</p>
+      <button class="open-button" id="openInvitation" type="button">
+        <strong data-i18n="openInvite">Open Invitation</strong>
+        <span>निमंत्रण खोलें</span>
+      </button>
+    </div>
+    <div class="curtain left"></div><div class="curtain right"></div>
+    <button class="skip-link" id="skipIntro" type="button" data-i18n="skipIntro">Skip opening ↗</button>
+  </div>
+
+  <header class="topbar">
+    <a class="brand-mark" href="#home" aria-label="Shivam and Shweta, home" style="text-decoration:none">
+      <span class="brand-seal">S+S</span>
+      <span><span class="brand-name">Shivam <span style="color:var(--gold)">&amp;</span> Shweta</span><span class="brand-sub" data-i18n="brandSub">Sunehri Shaam</span></span>
+    </a>
+    <div class="controls">
+      <button class="icon-control" id="musicToggle" type="button" aria-label="Play ambient melody" aria-pressed="false" title="Optional ambient melody">♫</button>
+      <button class="language-control" id="languageToggle" type="button" aria-label="Switch language"><span id="enLabel" class="active">EN</span><span class="divider">/</span><span id="hiLabel">हिंदी</span></button>
+      <button class="icon-control" id="shareButton" type="button" aria-label="Share invitation" title="Share invitation">↗</button>
+    </div>
+  </header>
+  <nav class="nav-strip" aria-label="Invitation sections">
+    <a href="#invitation" data-i18n="navInvitation">Invitation</a>
+    <a href="#countdown" data-i18n="navCountdown">Countdown</a>
+    <a href="#events" data-i18n="navEvents">Celebrations</a>
+    <a href="#directions" data-i18n="navVenues">Venues</a>
+    <a href="#rsvp" data-i18n="navRSVP">RSVP</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-visual-layer" aria-hidden="true"><img class="parallax-photo" src="https://images.unsplash.com/photo-1772127822552-ce9ef537bdcf?auto=format&amp;fit=crop&amp;w=2000&amp;q=84" alt="" fetchpriority="high" /></div>
+      <div class="hero-arch" aria-hidden="true"></div>
+      <div class="petals" aria-hidden="true"><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i></div>
+      <div class="hero-inner reveal">
+        <p class="eyebrow hero-kicker" data-i18n="heroKicker">WITH THE BLESSINGS OF OUR FAMILIES</p>
+        <div class="hero-monogram" aria-hidden="true">S+S</div>
+        <h1>Shivam Raj Sahu</h1>
+        <p class="hero-and" data-i18n="and">and</p>
+        <h1>Shweta Gupta</h1>
+        <p class="hero-hindi">शिवम राज साहू <span style="color:var(--gold)">एवं</span> श्वेता गुप्ता</p>
+        <p class="hero-date">25 NOVEMBER 2026</p>
+        <p class="hero-tagline" data-i18n="heroTagline">A beautiful new chapter begins</p>
+        <a href="#invitation" class="hero-scroll"><span data-i18n="discover">DISCOVER THE CELEBRATION</span><span class="arrow">↓</span></a>
+      </div>
+    </section>
+
+    <section class="section invitation-section" id="invitation">
+      <div class="section-inner">
+        <div class="invitation-paper reveal">
+          <p class="eyebrow section-kicker" data-i18n="invitationKicker">YOU ARE CORDIALLY INVITED · सादर आमंत्रण</p>
+          <h2 class="section-title" data-i18n="invitationTitle">A celebration of love & family</h2>
+          <div class="ornament-divider"><span>✧</span></div>
+          <p class="invitation-copy" data-i18n="invitationCopy">With the blessings of our families, we joyfully invite you to celebrate the wedding of Shivam Raj Sahu and Shweta Gupta. Your presence and blessings will make our special moments even more memorable as we begin this beautiful new chapter together. We look forward to celebrating these cherished occasions with you.</p>
+          <p style="font:italic 1rem var(--serif);color:#9a7444;margin:0" data-i18n="invitationBlessing">आपकी उपस्थिति हमारे लिए अनमोल है।</p>
+        </div>
+        <div class="family-grid">
+          <article class="family-card reveal">
+            <div class="family-tag" data-i18n="groomSide">Groom's family · वर पक्ष</div>
+            <h3>Shivam Raj Sahu</h3>
+            <p data-i18n="groomParents">Son of Mr. Ramchandra Sahu and Mrs. Sushma Sahu</p>
+            <p class="hindi-family" style="font-family:var(--serif);margin-top:.75rem">श्री रामचंद्र साहू एवं श्रीमती सुषमा साहू</p>
+          </article>
+          <article class="family-card reveal">
+            <div class="family-tag" data-i18n="brideSide">Bride's family · वधू पक्ष</div>
+            <h3>Shweta Gupta</h3>
+            <p data-i18n="brideParents">Daughter of Mr. Sanjay Kumar and Mrs. Sunita Devi</p>
+            <p class="hindi-family" style="font-family:var(--serif);margin-top:.75rem">श्री संजय कुमार एवं श्रीमती सुनीता देवी</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section countdown-section" id="countdown">
+      <div class="petals" aria-hidden="true"><i class="petal"></i><i class="petal"></i><i class="petal"></i></div>
+      <div class="section-inner reveal">
+        <p class="eyebrow section-kicker" data-i18n="countdownKicker">THE CELEBRATIONS BEGIN SOON</p>
+        <h2 class="section-title" data-i18n="countdownTitle">A journey of cherished moments</h2>
+        <p class="section-intro" data-i18n="countdownIntro">Counting down to the next celebration with our loved ones.</p>
+        <div class="countdown-wrap">
+          <div class="countdown-label" data-i18n="nextCelebration">NEXT CELEBRATION</div>
+          <div class="countdown-event" id="countdownEvent">Engagement · सगाई</div>
+          <div class="countdown-grid" aria-live="off">
+            <div class="time-unit"><span class="time-number" id="days">00</span><span class="time-label" data-i18n="days">Days</span></div>
+            <div class="time-unit"><span class="time-number" id="hours">00</span><span class="time-label" data-i18n="hours">Hours</span></div>
+            <div class="time-unit"><span class="time-number" id="minutes">00</span><span class="time-label" data-i18n="minutes">Minutes</span></div>
+            <div class="time-unit"><span class="time-number" id="seconds">00</span><span class="time-label" data-i18n="seconds">Seconds</span></div>
+          </div>
+          <p class="countdown-date" id="countdownDate">25 October 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section events-section" id="events">
+      <div class="section-inner">
+        <div class="events-header reveal">
+          <p class="eyebrow section-kicker" data-i18n="eventsKicker">SIX CELEBRATIONS</p>
+          <h2 class="section-title" data-i18n="eventsTitle">The wedding celebrations</h2>
+          <p class="section-intro" data-i18n="eventsIntro">Every ceremony is a cherished moment. We would be honoured to celebrate with you.</p>
+        </div>
+        <div class="events-list" id="eventsList"></div>
+        <p class="event-note" data-i18n="eventNote">Ceremony times are shown where confirmed. Please use the venue links to check the location before travelling.</p>
+      </div>
+    </section>
+
+    <section class="wedding-feature" id="wedding-feature">
+      <div class="wedding-scene-layer" aria-hidden="true"><img class="parallax-photo" src="https://images.unsplash.com/photo-1772127822552-ce9ef537bdcf?auto=format&fit=crop&w=1800&q=82" alt="" loading="lazy" /></div>
+      <div class="wedding-feature-inner reveal">
+        <div class="mandap-3d-wrap" aria-label="Illustrated royal wedding mandap" role="img">
+          <div class="mandap-aura"></div>
+          <div class="mandap-side mandap-side-left"></div><div class="mandap-side mandap-side-right"></div>
+          <img class="mandap-render parallax-photo" src="https://images.unsplash.com/photo-1744805624890-9931ebb50428?auto=format&fit=crop&w=1600&q=82" alt="" loading="lazy" decoding="async" />
+          <div class="mandap-plinth"></div>
+          <span class="mandap-spark mandap-spark-one">✦</span><span class="mandap-spark mandap-spark-two">✧</span>
+        </div>
+        <p class="eyebrow section-kicker" data-i18n="weddingKicker">THE MOST CHERISHED MOMENT</p>
+        <h2 class="section-title" data-i18n="weddingTitle">The Wedding of Shivam & Shweta</h2>
+        <p class="section-intro" data-i18n="weddingIntro">A promise for a lifetime, celebrated with the blessings of family and friends.</p>
+        <div class="wedding-meta">
+          <span>◷ <strong>25 November 2026</strong></span>
+          <span>✦ <strong>7:00 PM onwards</strong></span>
+        </div>
+        <p style="max-width:500px;margin:0 auto 1.4rem;color:#dfc9c6;font-size:.88rem">Chainpur, Babhani, Sonbhadra, Uttar Pradesh</p>
+        <a class="gold-button" href="https://www.google.com/maps/search/?api=1&query=Chainpur%2C%20Babhani%2C%20Sonbhadra%2C%20Uttar%20Pradesh" target="_blank" rel="noopener" data-i18n="weddingDirections">Find the wedding venue ↗</a>
+      </div>
+    </section>
+
+    <section class="section directions-section" id="directions">
+      <div class="section-inner">
+        <div class="center reveal">
+          <p class="eyebrow section-kicker" data-i18n="venueKicker">FIND YOUR WAY TO THE CELEBRATION</p>
+          <h2 class="section-title" data-i18n="venueTitle">Venues & directions</h2>
+          <p class="section-intro" data-i18n="venueIntro">Save the venue details and open the relevant map search when planning your visit.</p>
+        </div>
+        <div class="venue-grid">
+          <article class="venue-card reveal">
+            <div class="venue-icon" aria-hidden="true">⌖</div>
+            <div class="venue-events" data-i18n="venueOneEvents">ENGAGEMENT · WEDDING</div>
+            <h3 data-i18n="venueOneTitle">Chainpur, Babhani</h3>
+            <p>Chainpur, Babhani, Sonbhadra, Uttar Pradesh</p>
+            <a class="small-action" href="https://www.google.com/maps/search/?api=1&query=Chainpur%2C%20Babhani%2C%20Sonbhadra%2C%20Uttar%20Pradesh" target="_blank" rel="noopener"><span data-i18n="getDirections">Get Directions</span> ↗</a>
+          </article>
+          <article class="venue-card reveal">
+            <div class="venue-icon" aria-hidden="true">⌖</div>
+            <div class="venue-events" data-i18n="venueTwoEvents">HALDI · TILAK · MEHNDI & SANGEET · RECEPTION</div>
+            <h3 data-i18n="venueTwoTitle">Gahilgarh West</h3>
+            <p>Gahilgarh West, Vindhyanagar, Singrauli</p>
+            <a class="small-action" href="https://www.google.com/maps/search/?api=1&query=Gahilgarh%20West%2C%20Vindhyanagar%2C%20Singrauli" target="_blank" rel="noopener"><span data-i18n="getDirections">Get Directions</span> ↗</a>
+          </article>
+        </div>
+        <p class="map-disclaimer" data-i18n="mapDisclaimer">Map links search the supplied locality names. Please confirm the exact venue or landmark with the family before travelling.</p>
+      </div>
+    </section>
+
+    <section class="section rsvp-section" id="rsvp">
+      <div class="petals" aria-hidden="true"><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i></div>
+      <div class="rsvp-frame reveal">
+        <div class="rsvp-visual" aria-hidden="true"><span class="rsvp-ornament">❧</span><span class="rsvp-monogram">S <i>+</i> S</span><span class="rsvp-ornament">❧</span></div>
+        <p class="eyebrow section-kicker" data-i18n="rsvpKicker">YOUR PRESENCE IS OUR GREATEST BLESSING</p>
+        <h2 class="section-title" data-i18n="rsvpTitle">Let's celebrate together</h2>
+        <p class="rsvp-hindi">आपकी उपस्थिति और शुभाशीष हमारे लिए अनमोल हैं।</p>
+        <p class="section-intro" data-i18n="rsvpIntro">We look forward to celebrating these precious moments with you. Please let us know if you can join us.</p>
+        <form id="rsvpForm" class="rsvp-form">
+          <label class="form-field" for="guestName">
+            <span>Your name <b>/ आपका नाम</b> <em>*</em></span>
+            <input id="guestName" name="guestName" type="text" autocomplete="name" maxlength="90" required placeholder="Enter your name / अपना नाम लिखें" />
+          </label>
+          <fieldset class="form-fieldset">
+            <legend>Will you be joining us? <span>/ क्या आप पधार सकेंगे?</span> <em>*</em></legend>
+            <div class="choice-grid choice-grid-simple">
+              <label class="choice-card"><input type="radio" name="attendance" value="yes" required /><span class="choice-mark">✓</span><span>Joyfully attending <small>हाँ, ज़रूर आएँगे</small></span></label>
+              <label class="choice-card"><input type="radio" name="attendance" value="no" required /><span class="choice-mark">×</span><span>Unable to attend <small>खेद है, नहीं आ सकेंगे</small></span></label>
+            </div>
+          </fieldset>
+          <div class="form-field" id="guestCountWrap" hidden>
+            <label for="guestCount"><span>Number of guests, including you <b>/ आपके सहित कुल अतिथि</b></span></label>
+            <select id="guestCount" name="guestCount" disabled>
+              <option value="1">1 guest</option><option value="2">2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option><option value="7">7 guests</option><option value="8">8 guests</option><option value="9">9 guests</option><option value="10">10 guests</option>
+            </select>
+          </div>
+          <p class="rsvp-privacy">This opens WhatsApp with your reply already written. Please review it and tap Send. / WhatsApp में आपका जवाब तैयार होगा—कृपया देखकर Send दबाएँ।</p>
+          <button class="whatsapp-button" type="submit"><span aria-hidden="true" class="wa-icon">◉</span><span data-i18n="rsvpButton">Reply on WhatsApp</span><span aria-hidden="true">↗</span></button>
+          <p class="rsvp-form-status" id="rsvpFormStatus" role="status" aria-live="polite"></p>
+          <a class="rsvp-fallback-link" id="rsvpFallbackLink" href="#" target="_blank" rel="noopener" hidden>Open WhatsApp message ↗</a>
+        </form>
+        <p class="contact-line">WhatsApp · +91 94258 28496</p>
+        <div class="secondary-actions">
+          <button class="outline-button" id="downloadWeddingCalendar" type="button"><span data-i18n="saveWeddingDate">Save wedding date</span> ↓</button>
+          <button class="outline-button" id="shareBottom" type="button"><span data-i18n="shareInvite">Share invitation</span> ↗</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <span data-i18n="footerLine">With love, joy and the blessings of our families</span>
+    <small>SHIVAM RAJ SAHU · SHWETA GUPTA · 2026</small>
+  </footer>
+  <a class="floating-rsvp hidden" id="floatingRsvp" href="#rsvp"><span aria-hidden="true">◉</span><span data-i18n="rsvpButton">RSVP on WhatsApp</span></a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      const $ = (selector, root = document) => root.querySelector(selector);
+      const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+      const tz = 'Asia/Kolkata';
+      let language = 'en';
+      let audioContext = null;
+      let musicOn = false;
+      let musicNodes = [];
+      let musicTimer = null;
+
+      const copy = {
+        en: {
+          introKicker:'A ROYAL CELEBRATION', introCaption:'A beautiful new chapter begins', openInvite:'Open Invitation', skipIntro:'Skip opening ↗', brandSub:'Sunehri Shaam',
+          navInvitation:'Invitation', navCountdown:'Countdown', navEvents:'Celebrations', navVenues:'Venues', navRSVP:'RSVP',
+          heroKicker:'WITH THE BLESSINGS OF OUR FAMILIES', and:'and', heroTagline:'A beautiful new chapter begins', discover:'DISCOVER THE CELEBRATION',
+          invitationKicker:'YOU ARE CORDIALLY INVITED · सादर आमंत्रण', invitationTitle:'A celebration of love & family',
+          invitationCopy:'With the blessings of our families, we joyfully invite you to celebrate the wedding of Shivam Raj Sahu and Shweta Gupta. Your presence and blessings will make our special moments even more memorable as we begin this beautiful new chapter together. We look forward to celebrating these cherished occasions with you.',
+          invitationBlessing:'Your presence and blessings mean the world to us.', groomSide:"Groom's family · वर पक्ष", brideSide:"Bride's family · वधू पक्ष",
+          groomParents:'Son of Mr. Ramchandra Sahu and Mrs. Sushma Sahu', brideParents:'Daughter of Mr. Sanjay Kumar and Mrs. Sunita Devi',
+          countdownKicker:'THE CELEBRATIONS BEGIN SOON', countdownTitle:'A journey of cherished moments', countdownIntro:'Counting down to the next celebration with our loved ones.', nextCelebration:'NEXT CELEBRATION',
+          days:'Days', hours:'Hours', minutes:'Minutes', seconds:'Seconds',
+          eventsKicker:'SIX CELEBRATIONS', eventsTitle:'The wedding celebrations', eventsIntro:'Every ceremony is a cherished moment. We would be honoured to celebrate with you.', eventNote:'Ceremony times are shown where confirmed. Please use the venue links to check the location before travelling.',
+          weddingKicker:'THE MOST CHERISHED MOMENT', weddingTitle:'The Wedding of Shivam & Shweta', weddingIntro:'A promise for a lifetime, celebrated with the blessings of family and friends.', weddingDirections:'Find the wedding venue ↗',
+          venueKicker:'FIND YOUR WAY TO THE CELEBRATION', venueTitle:'Venues & directions', venueIntro:'Save the venue details and open the relevant map search when planning your visit.', venueOneEvents:'ENGAGEMENT · WEDDING', venueOneTitle:'Chainpur, Babhani', venueTwoEvents:'HALDI · TILAK · MEHNDI & SANGEET · RECEPTION', venueTwoTitle:'Gahilgarh West', getDirections:'Get Directions', mapDisclaimer:'Map links search the supplied locality names. Please confirm the exact venue or landmark with the family before travelling.',
+          rsvpKicker:'YOUR PRESENCE IS OUR GREATEST BLESSING', rsvpTitle:"Let's celebrate together", rsvpIntro:'We look forward to celebrating these precious moments with you. Please let us know if you can join us.', rsvpButton:'Reply on WhatsApp', saveWeddingDate:'Save wedding date', shareInvite:'Share invitation', footerLine:'With love, joy and the blessings of our families',
+          toastCopied:'Invitation link copied.', toastShare:'Share this invitation with your family and friends.', toastCalendar:'Wedding calendar file prepared.', toastMusicOn:'Ambient melody on · tap to pause.', toastMusicOff:'Ambient melody paused.',
+          eventEngagement:'Engagement', eventHaldi:'Haldi Ceremony', eventTilak:'Tilak Ceremony', eventMehndi:'Mehndi & Sangeet', eventWedding:'Wedding / Shaadi', eventReception:'Reception',
+          eventEngagementTag:'Two hearts, one promise', eventHaldiTag:'Golden hues and happy beginnings', eventTilakTag:'A cherished family tradition', eventMehndiTag:'Mehndi, music and celebration', eventWeddingTag:'The beginning of forever', eventReceptionTag:'One more evening to celebrate together',
+          mapAction:'Directions', calendarAction:'Add to calendar', mainCelebration:'Main celebration', timeFrom:'7:00 PM onwards', today:'The celebration is today!', passed:'This celebration has passed', nextUp:'Next celebration',
+          openCalendar:'Save wedding date', sharingTitle:'Shivam Raj Sahu & Shweta Gupta — Wedding Invitation', shareText:'Join us in celebrating Shivam Raj Sahu and Shweta Gupta in November 2026.'
+        },
+        hi: {
+          introKicker:'एक शाही उत्सव', introCaption:'एक खूबसूरत नए अध्याय की शुरुआत', openInvite:'निमंत्रण खोलें', skipIntro:'प्रारंभ छोड़ें ↗', brandSub:'सुनहरी शाम',
+          navInvitation:'निमंत्रण', navCountdown:'उलटी गिनती', navEvents:'समारोह', navVenues:'स्थान', navRSVP:'जवाब दें',
+          heroKicker:'परिवारों के आशीर्वाद सहित', and:'एवं', heroTagline:'एक खूबसूरत नए अध्याय की शुरुआत', discover:'समारोह की झलक देखें',
+          invitationKicker:'सादर आमंत्रण · YOU ARE CORDIALLY INVITED', invitationTitle:'प्रेम और परिवार का उत्सव',
+          invitationCopy:'अपने परिवारों के आशीर्वाद से, हम शिवम राज साहू एवं श्वेता गुप्ता के शुभ विवाह के अवसर पर आपको सादर आमंत्रित करते हैं। आपकी उपस्थिति और शुभाशीष हमारे जीवन के इस नए अध्याय को और भी यादगार बनाएँगे। हमें आपके साथ इन मंगलमय अवसरों का उत्सव मनाने की प्रतीक्षा रहेगी।',
+          invitationBlessing:'आपकी उपस्थिति और शुभाशीष हमारे लिए अनमोल हैं।', groomSide:'वर पक्ष · GROOM’S FAMILY', brideSide:'वधू पक्ष · BRIDE’S FAMILY',
+          groomParents:'श्री रामचंद्र साहू एवं श्रीमती सुषमा साहू के सुपुत्र', brideParents:'श्री संजय कुमार एवं श्रीमती सुनीता देवी की सुपुत्री',
+          countdownKicker:'उत्सव की शुभ घड़ियाँ निकट हैं', countdownTitle:'यादगार पलों का सफ़र', countdownIntro:'अगले उत्सव तक की उलटी गिनती।', nextCelebration:'अगला समारोह',
+          days:'दिन', hours:'घंटे', minutes:'मिनट', seconds:'सेकंड',
+          eventsKicker:'छह अवसर · एक खूबसूरत कहानी', eventsTitle:'विवाह के मंगलमय समारोह', eventsIntro:'हर रस्म एक यादगार पल है। इन खुशियों को आपके साथ मनाना हमारे लिए सौभाग्य होगा।', eventNote:'समारोह का समय वहीं दिया गया है जहाँ इसकी पुष्टि हुई है। यात्रा से पहले कृपया स्थान की जानकारी जाँच लें।',
+          weddingKicker:'सबसे मंगलमय अवसर', weddingTitle:'शिवम एवं श्वेता का शुभ विवाह', weddingIntro:'परिवार और मित्रों के आशीर्वाद से जीवन भर के साथ की एक नई शुरुआत।', weddingDirections:'विवाह स्थल का रास्ता देखें ↗',
+          venueKicker:'समारोह स्थल तक पहुँचें', venueTitle:'समारोह स्थल एवं रास्ता', venueIntro:'यात्रा की योजना बनाते समय स्थान की जानकारी देखें और मैप खोलें।', venueOneEvents:'सगाई · विवाह', venueOneTitle:'चैनपुर, भभनी', venueTwoEvents:'हल्दी · तिलक · मेहंदी एवं संगीत · स्वागत', venueTwoTitle:'गाहिलगढ़ वेस्ट', getDirections:'रास्ता देखें', mapDisclaimer:'मैप लिंक दिए गए क्षेत्र के नाम खोजते हैं। यात्रा से पहले परिवार से सटीक स्थल या पहचान-चिह्न की पुष्टि कर लें।',
+          rsvpKicker:'आपकी उपस्थिति हमारा सबसे बड़ा आशीर्वाद है', rsvpTitle:'आइए, खुशियाँ साथ मनाएँ', rsvpIntro:'इन अनमोल पलों को आपके साथ मनाने की प्रतीक्षा रहेगी। कृपया बताएँ कि आप पधार सकेंगे या नहीं।', rsvpButton:'WhatsApp पर जवाब दें', saveWeddingDate:'विवाह की तारीख़ सेव करें', shareInvite:'निमंत्रण साझा करें', footerLine:'परिवारों के स्नेह, आनंद और आशीर्वाद सहित',
+          toastCopied:'निमंत्रण लिंक कॉपी हो गया।', toastShare:'इस निमंत्रण को परिवार और मित्रों के साथ साझा करें।', toastCalendar:'विवाह की कैलेंडर फ़ाइल तैयार है।', toastMusicOn:'मधुर धुन चालू · रोकने के लिए फिर दबाएँ।', toastMusicOff:'मधुर धुन रोक दी गई।',
+          eventEngagement:'सगाई समारोह', eventHaldi:'हल्दी समारोह', eventTilak:'तिलक समारोह', eventMehndi:'मेहंदी एवं संगीत', eventWedding:'शुभ विवाह', eventReception:'स्वागत समारोह',
+          eventEngagementTag:'दो दिल, एक वादा', eventHaldiTag:'हल्दी की चमक और नई शुरुआत', eventTilakTag:'परिवार की शुभ परंपरा', eventMehndiTag:'मेहंदी, संगीत और खुशियाँ', eventWeddingTag:'सात जन्मों के साथ की शुरुआत', eventReceptionTag:'खुशियाँ मनाने की एक और शाम',
+          mapAction:'रास्ता देखें', calendarAction:'कैलेंडर में जोड़ें', mainCelebration:'मुख्य समारोह', timeFrom:'शाम 7 बजे से', today:'आज है शुभ अवसर!', passed:'यह समारोह संपन्न हो चुका है', nextUp:'अगला समारोह', openCalendar:'विवाह की तारीख़ सेव करें',
+          sharingTitle:'शिवम राज साहू एवं श्वेता गुप्ता — विवाह निमंत्रण', shareText:'नवंबर 2026 में शिवम राज साहू एवं श्वेता गुप्ता के विवाह समारोह में सादर आमंत्रित हैं।'
+        }
+      };
+
+      const events = [
+        { id:'engagement', date:'2026-10-25', titleKey:'eventEngagement', tagKey:'eventEngagementTag', symbol:'✧', art:'https://images.unsplash.com/photo-1769869174645-cdea225d60da?auto=format&fit=crop&w=1000&q=82', venue:'Chainpur, Babhani, Sonbhadra, Uttar Pradesh', venueHi:'चैनपुर, भभनी, सोनभद्र, उत्तर प्रदेश', map:'Chainpur, Babhani, Sonbhadra, Uttar Pradesh', featured:false },
+        { id:'haldi', date:'2026-11-21', titleKey:'eventHaldi', tagKey:'eventHaldiTag', symbol:'✿', art:'https://images.unsplash.com/photo-1670774837214-21b88943a6bb?auto=format&fit=crop&w=1000&q=82', venue:'Gahilgarh West, Vindhyanagar, Singrauli', venueHi:'गाहिलगढ़ वेस्ट, विंध्यनगर, सिंगरौली', map:'Gahilgarh West, Vindhyanagar, Singrauli', featured:false },
+        { id:'tilak', date:'2026-11-23', titleKey:'eventTilak', tagKey:'eventTilakTag', symbol:'◉', art:'https://images.unsplash.com/photo-1754277198657-c288797a30a7?auto=format&fit=crop&w=1000&q=82', venue:'Gahilgarh West, Vindhyanagar, Singrauli', venueHi:'गाहिलगढ़ वेस्ट, विंध्यनगर, सिंगरौली', map:'Gahilgarh West, Vindhyanagar, Singrauli', featured:false },
+        { id:'mehndi', date:'2026-11-24', titleKey:'eventMehndi', tagKey:'eventMehndiTag', symbol:'♫', art:'https://images.unsplash.com/photo-1771992230505-97e0c3d38213?auto=format&fit=crop&w=1000&q=82', venue:'Gahilgarh West, Vindhyanagar, Singrauli', venueHi:'गाहिलगढ़ वेस्ट, विंध्यनगर, सिंगरौली', map:'Gahilgarh West, Vindhyanagar, Singrauli', featured:false },
+        { id:'wedding', date:'2026-11-25', time:'19:00', titleKey:'eventWedding', tagKey:'eventWeddingTag', symbol:'♕', art:'https://images.unsplash.com/photo-1744805624890-9931ebb50428?auto=format&fit=crop&w=1200&q=82', venue:'Chainpur, Babhani, Sonbhadra, Uttar Pradesh', venueHi:'चैनपुर, भभनी, सोनभद्र, उत्तर प्रदेश', map:'Chainpur, Babhani, Sonbhadra, Uttar Pradesh', featured:true },
+        { id:'reception', date:'2026-11-28', titleKey:'eventReception', tagKey:'eventReceptionTag', symbol:'✦', art:'https://images.unsplash.com/photo-1587271636175-90d58cdad458?auto=format&fit=crop&w=1200&q=82', venue:'Gahilgarh West, Vindhyanagar, Singrauli', venueHi:'गाहिलगढ़ वेस्ट, विंध्यनगर, सिंगरौली', map:'Gahilgarh West, Vindhyanagar, Singrauli', featured:false }
+      ];
+      const dateFormatter = new Intl.DateTimeFormat('en-IN', { day:'numeric', month:'long', year:'numeric', timeZone:tz });
+      const dateFormatterHi = new Intl.DateTimeFormat('hi-IN', { day:'numeric', month:'long', year:'numeric', timeZone:tz });
+      const mapUrl = (query) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+      const localDateStart = (date, time = '00:00') => new Date(`${date}T${time}:00+05:30`);
+
+      function showToast(message) {
+        const toast = $('#toast'); toast.textContent = message; toast.classList.add('show');
+        clearTimeout(showToast.timer); showToast.timer = setTimeout(() => toast.classList.remove('show'), 2600);
+      }
+      function formatDate(date) { return language === 'hi' ? dateFormatterHi.format(date) : dateFormatter.format(date); }
+      function icsDate(date, time = '00:00') {
+        const d = localDateStart(date, time);
+        return d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
+      }
+      function nextDayIso(date) {
+        const d = new Date(`${date}T12:00:00+05:30`); d.setUTCDate(d.getUTCDate() + 1);
+        return indiaDateKey(d);
+      }
+      function escapeICS(value) { return String(value).replace(/\\/g,'\\\\').replace(/\n/g,'\\n').replace(/,/g,'\\,').replace(/;/g,'\\;'); }
+      function downloadICS(event) {
+        const allDay = !event.time;
+        const start = allDay ? event.date.replace(/-/g, '') : icsDate(event.date, event.time);
+        const end = allDay ? nextDayIso(event.date).replace(/-/g, '') : icsDate(event.date, '21:00');
+        const title = copy[language][event.titleKey];
+        const location = language === 'hi' ? event.venueHi : event.venue;
+        const description = language === 'hi' ? 'शिवम राज साहू एवं श्वेता गुप्ता के विवाह समारोह में सादर आमंत्रित हैं।' : 'You are invited to celebrate Shivam Raj Sahu and Shweta Gupta.';
+        const startLine = allDay ? `DTSTART;VALUE=DATE:${start}` : `DTSTART:${start}`;
+        const endLine = allDay ? `DTEND;VALUE=DATE:${end}` : `DTEND:${end}`;
+        const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Sunehri Shaam//Wedding Invitation//EN','CALSCALE:GREGORIAN','BEGIN:VEVENT',`UID:${event.id}-${event.date}@sunehri-shaam.invite`,`DTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z')}`,startLine,endLine,`SUMMARY:${escapeICS(title)}`,`LOCATION:${escapeICS(location)}`,`DESCRIPTION:${escapeICS(description)}`,'END:VEVENT','END:VCALENDAR'].join('\r\n');
+        const blob = new Blob([ics], { type:'text/calendar;charset=utf-8' });
+        const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = `${event.id}-shivam-shweta.ics`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+      }
+      function makeEventCard(event) {
+        const t = copy[language];
+        const card = document.createElement('article'); card.className = `event-card reveal${event.featured ? ' featured' : ''}`;
+        const dateObj = localDateStart(event.date);
+        const eventDate = formatDate(dateObj);
+        const venue = language === 'hi' ? event.venueHi : event.venue;
+        const timeMarkup = event.time ? `<p class="event-time">${language === 'hi' ? t.timeFrom : '7:00 PM onwards'}</p>` : '';
+        const featuredLabel = event.featured ? `<span class="main-event-badge">✦ ${t.mainCelebration}</span>` : '';
+        const altText = `${t[event.titleKey]} — ${eventDate}`;
+        card.innerHTML = `
+          <div class="event-art-wrap">
+            <img class="event-art parallax-photo" src="${event.art}" alt="${altText}" loading="lazy" decoding="async" />
+            <div class="event-art-wash" aria-hidden="true"></div>
+            <span class="event-art-index">${String(events.findIndex(e => e.id === event.id) + 1).padStart(2, '0')} <i>/ 06</i></span>
+            ${featuredLabel}
+          </div>
+          <div class="event-content">
+            <div class="event-date">${eventDate}</div>
+            <h3 class="event-title">${t[event.titleKey]}</h3>
+            ${timeMarkup}
+            <div class="event-venue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>${venue}</span></div>
+            <p class="event-tagline">${t[event.tagKey]}</p>
+            <div class="event-actions">
+              <a class="small-action" href="${mapUrl(event.map)}" target="_blank" rel="noopener">${t.mapAction} ↗</a>
+              <button class="small-action calendar-event" type="button">${t.calendarAction} ↓</button>
+            </div>
+          </div>`;
+        $('.calendar-event', card).addEventListener('click', () => downloadICS(event));
+        return card;
+      }
+      function renderEvents() {
+        const container = $('#eventsList'); container.replaceChildren(...events.map(makeEventCard));
+        initReveal(container);
+        initCardDepth(container);
+      }
+      function applyLanguage() {
+        document.documentElement.lang = language === 'hi' ? 'hi' : 'en';
+        $$('[data-i18n]').forEach(el => {
+          const key = el.dataset.i18n;
+          if (copy[language][key] !== undefined) el.textContent = copy[language][key];
+        });
+        $$('[data-i18n-placeholder]').forEach(el => {
+          const key = el.dataset.i18nPlaceholder;
+          if (copy[language][key] !== undefined) el.placeholder = copy[language][key];
+        });
+        $('#enLabel').classList.toggle('active', language === 'en');
+        $('#hiLabel').classList.toggle('active', language === 'hi');
+        $('#languageToggle').setAttribute('aria-label', language === 'en' ? 'Switch to Hindi' : 'Switch to English');
+        renderEvents(); updateCountdown();
+      }
+
+      function indiaDateKey(date = new Date()) {
+        const parts = new Intl.DateTimeFormat('en-CA', { timeZone:tz, year:'numeric', month:'2-digit', day:'2-digit' }).formatToParts(date);
+        const values = Object.fromEntries(parts.map(part => [part.type, part.value]));
+        return `${values.year}-${values.month}-${values.day}`;
+      }
+      function getNextEvent(now = new Date()) {
+        const today = indiaDateKey(now);
+        return events.find(event => event.date > today || (event.date === today && (!event.time || localDateStart(event.date, event.time).getTime() > now.getTime()))) || null;
+      }
+      function updateCountdown() {
+        const now = new Date(); const next = getNextEvent(now); const t = copy[language];
+        if (!next) {
+          $('#countdownEvent').textContent = language === 'hi' ? 'शुभकामनाओं सहित!' : 'Celebrations complete — with love!';
+          $('#countdownDate').textContent = language === 'hi' ? 'शिवम एवं श्वेता को शुभकामनाएँ' : 'Best wishes to Shivam & Shweta';
+          ['days','hours','minutes','seconds'].forEach(id => $('#'+id).textContent = '00'); return;
+        }
+        const target = localDateStart(next.date, next.time || '00:00');
+        const isTodayWithoutKnownTime = next.date === indiaDateKey(now) && !next.time;
+        const delta = isTodayWithoutKnownTime ? 0 : Math.max(0, target.getTime() - now.getTime());
+        $('#days').textContent = String(Math.floor(delta / 86400000)).padStart(2,'0');
+        $('#hours').textContent = String(Math.floor((delta % 86400000) / 3600000)).padStart(2,'0');
+        $('#minutes').textContent = String(Math.floor((delta % 3600000) / 60000)).padStart(2,'0');
+        $('#seconds').textContent = String(Math.floor((delta % 60000) / 1000)).padStart(2,'0');
+        $('#countdownEvent').textContent = `${t[next.titleKey]}${next.id === 'wedding' ? ' · ' + (language === 'hi' ? 'शुभ विवाह' : 'Main celebration') : ''}`;
+        $('#countdownDate').textContent = `${isTodayWithoutKnownTime ? t.today : formatDate(target) + (next.time ? ' · ' + t.timeFrom : '')}`;
+      }
+      setInterval(updateCountdown, 1000);
+
+      function initReveal(root = document) {
+        const elements = $$('.reveal:not([data-observed])', root);
+        if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          elements.forEach(el => el.classList.add('visible')); return;
+        }
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); } });
+        }, { threshold: .12, rootMargin: '0px 0px -35px 0px' });
+        elements.forEach((el, i) => { el.dataset.observed = 'true'; el.style.transitionDelay = `${Math.min(i % 4, 3) * 75}ms`; observer.observe(el); });
+      }
+
+      function initCardDepth() {
+        // Avoid pointer-tilt gimmicks; the page uses restrained scroll parallax instead.
+      }
+
+      async function shareInvitation() {
+        const shareData = { title: copy[language].sharingTitle, text: copy[language].shareText, url: window.location.href };
+        if (navigator.share) {
+          try { await navigator.share(shareData); } catch (err) { if (err && err.name !== 'AbortError') showToast(copy[language].toastShare); }
+        } else if (navigator.clipboard && window.isSecureContext) {
+          try { await navigator.clipboard.writeText(window.location.href); showToast(copy[language].toastCopied); }
+          catch { showToast(copy[language].toastShare); }
+        } else {
+          showToast(copy[language].toastShare);
+        }
+      }
+
+      // A small synthesized ambient preview. It is only started after the guest taps the music control.
+      function startAmbientMusic() {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) { showToast(language === 'hi' ? 'इस ब्राउज़र में ऑडियो उपलब्ध नहीं है।' : 'Audio is not available in this browser.'); return false; }
+        audioContext = audioContext || new AudioCtx();
+        if (audioContext.state === 'suspended') audioContext.resume();
+        const master = audioContext.createGain(); master.gain.value = 0.075; master.connect(audioContext.destination); musicNodes.push(master);
+        const filter = audioContext.createBiquadFilter(); filter.type = 'lowpass'; filter.frequency.value = 1700; filter.connect(master); musicNodes.push(filter);
+        const drone1 = audioContext.createOscillator(); drone1.type = 'triangle'; drone1.frequency.value = 146.83;
+        const drone2 = audioContext.createOscillator(); drone2.type = 'sine'; drone2.frequency.value = 220;
+        const droneGain = audioContext.createGain(); droneGain.gain.value = .26; drone1.connect(droneGain); drone2.connect(droneGain); droneGain.connect(filter);
+        drone1.start(); drone2.start(); musicNodes.push(drone1, drone2, droneGain);
+        const notes = [293.66, 329.63, 392.00, 440.00, 392.00, 329.63, 261.63, 329.63]; let noteIndex = 0;
+        const playNote = () => {
+          if (!audioContext || !musicOn) return;
+          const t = audioContext.currentTime;
+          const osc = audioContext.createOscillator(); osc.type = 'sine'; osc.frequency.setValueAtTime(notes[noteIndex % notes.length], t);
+          const overtone = audioContext.createOscillator(); overtone.type = 'triangle'; overtone.frequency.setValueAtTime(notes[noteIndex % notes.length] * 2.01, t);
+          const gain = audioContext.createGain(); gain.gain.setValueAtTime(.0001, t); gain.gain.exponentialRampToValueAtTime(.10, t + .11); gain.gain.exponentialRampToValueAtTime(.0001, t + 1.75);
+          const overtoneGain = audioContext.createGain(); overtoneGain.gain.value = .14;
+          osc.connect(gain); overtone.connect(overtoneGain); overtoneGain.connect(gain); gain.connect(filter); osc.start(t); overtone.start(t); osc.stop(t + 1.85); overtone.stop(t + 1.85);
+          noteIndex++;
+        };
+        musicOn = true; playNote(); musicTimer = setInterval(playNote, 1900); return true;
+      }
+      function stopAmbientMusic() {
+        musicOn = false; clearInterval(musicTimer); musicTimer = null;
+        if (audioContext) {
+          musicNodes.forEach(node => { try { if (node.stop) node.stop(); } catch {} try { if (node.disconnect) node.disconnect(); } catch {} });
+          musicNodes = [];
+        }
+      }
+      $('#musicToggle').addEventListener('click', () => {
+        if (musicOn) {
+          stopAmbientMusic(); $('#musicToggle').setAttribute('aria-pressed','false'); $('#musicToggle').setAttribute('aria-label','Play ambient melody'); $('#musicToggle').textContent = '♫'; showToast(copy[language].toastMusicOff);
+        } else {
+          if (startAmbientMusic()) { $('#musicToggle').setAttribute('aria-pressed','true'); $('#musicToggle').setAttribute('aria-label','Pause ambient melody'); $('#musicToggle').textContent = 'Ⅱ'; showToast(copy[language].toastMusicOn); }
+        }
+      });
+      $('#languageToggle').addEventListener('click', () => { language = language === 'en' ? 'hi' : 'en'; applyLanguage(); });
+      $('#shareButton').addEventListener('click', shareInvitation);
+      $('#shareBottom').addEventListener('click', shareInvitation);
+      $('#downloadWeddingCalendar').addEventListener('click', () => { downloadICS(events.find(event => event.id === 'wedding')); showToast(copy[language].toastCalendar); });
+
+      // A small RSVP: name + attendance, and guest count only when attending.
+      const rsvpForm = $('#rsvpForm');
+      const guestCountWrap = $('#guestCountWrap');
+      const guestCountInput = $('#guestCount');
+      const rsvpStatus = $('#rsvpFormStatus');
+      const fallbackLink = $('#rsvpFallbackLink');
+      $$('input[name="attendance"]', rsvpForm).forEach(input => input.addEventListener('change', () => {
+        const attending = $('input[name="attendance"]:checked', rsvpForm)?.value === 'yes';
+        guestCountWrap.hidden = !attending;
+        guestCountInput.disabled = !attending;
+        rsvpStatus.textContent = '';
+      }));
+
+      rsvpForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = $('#guestName').value.trim();
+        const attendance = $('input[name="attendance"]:checked', rsvpForm)?.value;
+        const guestCount = attendance === 'yes' ? guestCountInput.value : '0';
+        if (!name || !attendance) {
+          rsvpStatus.textContent = language === 'hi' ? 'कृपया अपना नाम लिखें और उपस्थिति चुनें।' : 'Please enter your name and select an attendance response.';
+          return;
+        }
+        const message = language === 'hi'
+          ? `नमस्ते! शिवम राज साहू एवं श्वेता गुप्ता के विवाह का जवाब:
+
+नाम: ${name}
+उपस्थिति: ${attendance === 'yes' ? 'सहर्ष उपस्थित रहेंगे' : 'खेद है, उपस्थित नहीं हो सकेंगे'}${attendance === 'yes' ? `
+कुल अतिथि (मेरे सहित): ${guestCount}` : ''}
+
+सादर।`
+          : `Namaste! My RSVP for Shivam Raj Sahu & Shweta Gupta's wedding:
+
+Name: ${name}
+Attendance: ${attendance === 'yes' ? 'Joyfully attending' : 'Regretfully unable to attend'}${attendance === 'yes' ? `
+Number of guests (including me): ${guestCount}` : ''}
+
+With regards.`;
+        const waUrl = `https://wa.me/919425828496?text=${encodeURIComponent(message)}`;
+        fallbackLink.href = waUrl;
+        fallbackLink.hidden = false;
+        rsvpStatus.textContent = language === 'hi'
+          ? 'WhatsApp खुल रहा है। वहाँ संदेश देखकर Send दबाएँ।'
+          : 'Opening WhatsApp with your reply. Review it there and tap Send.';
+        // Same-tab navigation is more reliable on mobile than a popup that may be blocked.
+        window.location.assign(waUrl);
+      });
+
+      // Subtle, scroll-linked image drift inspired by editorial wedding sites.
+      // The effect is deliberately small and is disabled for reduced-motion users.
+      function initScrollMotion() {
+        const progress = $('#scrollProgress');
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let scheduled = false;
+        const paint = () => {
+          scheduled = false;
+          const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+          progress.style.transform = `scaleX(${Math.min(1, Math.max(0, window.scrollY / maxScroll))})`;
+          if (!prefersReduced) {
+            const heroImage = $('.hero-visual-layer img');
+            if (heroImage) heroImage.style.setProperty('--scroll-shift', `${Math.min(70, window.scrollY * .12)}px`);
+            $$('.parallax-photo').filter(img => !img.closest('.hero-visual-layer')).forEach(img => {
+              const rect = img.getBoundingClientRect();
+              const distance = (rect.top + rect.height * .5 - window.innerHeight * .5) / Math.max(window.innerHeight, 1);
+              const shift = Math.max(-11, Math.min(11, -distance * 10));
+              img.style.setProperty('--parallax-shift', `${shift.toFixed(1)}px`);
+            });
+          }
+        };
+        const onScroll = () => { if (!scheduled) { scheduled = true; window.requestAnimationFrame(paint); } };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll, { passive: true });
+        paint();
+      }
+
+      function openIntro() {
+        const intro = $('#intro'); if (intro.classList.contains('is-opening') || intro.classList.contains('is-open')) return;
+        intro.classList.add('is-opening'); document.body.classList.remove('locked');
+        setTimeout(() => { intro.classList.add('is-open'); intro.setAttribute('aria-hidden','true'); }, 750);
+      }
+      $('#openInvitation').addEventListener('click', openIntro);
+      $('#skipIntro').addEventListener('click', openIntro);
+      window.addEventListener('keydown', event => { if (event.key === 'Escape') openIntro(); });
+
+      const floating = $('#floatingRsvp');
+      let rsvpIsVisible = false;
+      const updateFloatingRsvp = () => floating.classList.toggle('hidden', window.scrollY < 500 || rsvpIsVisible);
+      if ('IntersectionObserver' in window) {
+        const rsvpObserver = new IntersectionObserver(entries => { rsvpIsVisible = entries[0].isIntersecting; updateFloatingRsvp(); }, { threshold: .12 });
+        rsvpObserver.observe($('#rsvp'));
+        window.addEventListener('scroll', updateFloatingRsvp, { passive: true });
+      } else { window.addEventListener('scroll', updateFloatingRsvp, { passive: true }); updateFloatingRsvp(); }
+
+      initReveal(); renderEvents(); updateCountdown(); initScrollMotion();
+      // Small convenience: retain the invitation rather than reopening it on refresh in this tab.
+      try { if (sessionStorage.getItem('sunehriOpened') === 'yes') openIntro(); sessionStorage.setItem('sunehriOpened','yes'); } catch {}
+    })();
+  </script>
+</body>
+</html>
