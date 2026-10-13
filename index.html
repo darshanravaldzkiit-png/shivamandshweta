@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#441522" />
+  <meta name="theme-color" content="#5a102b" />
   <meta name="color-scheme" content="light" />
   <meta name="description" content="A royal wedding invitation for Shivam Raj Sahu and Shweta Gupta. Join us for our cherished family celebrations in October and November 2026." />
   <meta property="og:type" content="website" />
@@ -13,6 +13,9 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="assets/share-cover.png" />
   <title>Shivam & Shweta — Sunehri Shaam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --wine: #441522;
@@ -25,7 +28,7 @@
       --ivory-2: #efe2ce;
       --ink: #352329;
       --muted: #79656a;
-      --green: #237a51;
+      --green: #5a102b;
       --shadow: 0 24px 70px rgba(44, 15, 25, .13);
       --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
       --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -478,6 +481,345 @@
       .hero-visual-layer img,.wedding-scene-layer img,.event-art,.mandap-render { transform: none !important; }
       .event-card,.reveal { opacity: 1 !important; transform: none !important; }
     }
+
+
+    
+    /* Sunehri Shaam — editorial Hindu wedding redesign */
+    :root {
+      --wine: #5a102b;
+      --wine-2: #741b37;
+      --wine-3: #922f43;
+      --vermillion: #b64035;
+      --gold: #bb9657;
+      --gold-light: #efd9a8;
+      --gold-dim: #8a683b;
+      --ivory: #fbf6ee;
+      --ivory-2: #f1e5d5;
+      --ink: #38232b;
+      --muted: #75636a;
+      --green: var(--wine);
+      --shadow: 0 18px 50px rgba(69, 14, 33, .10);
+      --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+      --sans: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --saffron: #d08a37;
+    }
+    [hidden] { display: none !important; }
+    html { background: var(--ivory); scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body { background: var(--ivory); color: var(--ink); font-family: var(--sans); }
+    .scroll-progress { height: 3px; background: linear-gradient(90deg,var(--vermillion),var(--gold-light)); }
+    .section { padding: clamp(4.2rem, 8vw, 7.8rem) clamp(1.1rem, 5vw, 2.8rem); }
+    .section-inner { width: min(100%, 1180px); }
+    .eyebrow { letter-spacing: .19em; font-size: .65rem; }
+    .section-kicker { color: var(--gold-dim); letter-spacing: .18em; margin-bottom: .8rem; }
+    .section-title { color: var(--wine); font-family: var(--serif); font-size: clamp(2.5rem, 5.1vw, 4.15rem); font-weight: 500; line-height: .98; letter-spacing: -.035em; }
+    .section-intro { color: var(--muted); max-width: 570px; line-height: 1.75; font-size: .96rem; }
+    .ornament-divider { color: var(--gold); margin: 1.2rem auto 1.45rem; }
+    .ornament-divider::before,.ornament-divider::after { background: linear-gradient(90deg,transparent,var(--gold)); }
+
+    /* Opening: deep sindoor-maroon velvet, restrained zari lines. */
+    .intro-screen { background: #3b0b20; color: var(--ivory); }
+    .intro-scene { opacity: 1; background: radial-gradient(ellipse at 50% 38%,rgba(189,119,63,.19),transparent 42%),radial-gradient(ellipse at 50% 90%,rgba(181,47,54,.18),transparent 43%),linear-gradient(150deg,#300817 0%,#65152e 50%,#350817 100%); animation: none; }
+    .intro-screen::after { background: radial-gradient(ellipse at 50% 38%,transparent 0,rgba(20,2,10,.2) 63%,rgba(20,2,10,.61) 100%); }
+    .intro-halo { opacity: .6; background: radial-gradient(circle,rgba(234,198,127,.15),transparent 68%); }
+    .intro-arch { z-index:2; width: min(78vw, 475px); max-height: 83vh; border-color: rgba(239,217,168,.52); box-shadow: inset 0 0 0 9px rgba(239,217,168,.025),inset 0 0 0 10px rgba(239,217,168,.14); }
+    .intro-arch::before { border-color: rgba(239,217,168,.26); }
+    .intro-content { position:relative; z-index:7; width: min(88vw,530px); padding: 2.5rem 1rem 3.3rem; text-shadow: 0 3px 22px rgba(0,0,0,.25); }
+    .intro-screen.is-open { opacity:0; visibility:hidden; pointer-events:none; transition:opacity .8s ease,visibility 0s linear .8s; }
+    .intro-screen.is-opening .skip-link { opacity:0; transition:opacity .22s ease; }
+    .intro-sub { color: #ead8b8; letter-spacing: .22em; }
+    .intro-seal { display:flex; align-items:center; justify-content:center; gap:.1rem; white-space:nowrap; width: 76px; height: 76px; margin: 1.15rem auto 1.15rem; border-color: rgba(239,217,168,.82); color: #f4e4c2; box-shadow: 0 0 0 5px rgba(239,217,168,.045); }
+    .intro-seal::before,.intro-seal::after { color: var(--gold-light); }
+    .intro-heading { font-size: clamp(3.1rem,10vw,5.3rem); line-height: .88; letter-spacing: -.045em; }
+    .intro-content > .intro-sub:last-of-type { margin-top: 1.2rem; font-size: .67rem; }
+    .open-button { min-width: 218px; margin-top: 1.8rem; padding: .9rem 1.35rem .82rem; color: #fff6e6; border: 1px solid rgba(239,217,168,.84); border-radius: 2px; background: rgba(44,5,20,.55); box-shadow: 0 8px 25px rgba(0,0,0,.16); backdrop-filter: blur(5px); }
+    .open-button:hover { background: rgba(187,150,87,.15); transform: translateY(-2px); }
+    .open-button strong { font-size: .73rem; font-weight: 700; letter-spacing: .17em; }
+    .open-button span { color: var(--gold-light); font-size: .8rem; }
+    .curtain { z-index: 5; background: repeating-linear-gradient(90deg,rgba(255,255,255,.02) 0 2px,transparent 2px 11px),linear-gradient(90deg,#300817,#67152f 47%,#4a0d25); box-shadow: inset -18px 0 36px rgba(15,3,8,.26); }
+    .curtain.right { background: repeating-linear-gradient(90deg,rgba(255,255,255,.02) 0 2px,transparent 2px 11px),linear-gradient(90deg,#4a0d25,#67152f 54%,#300817); box-shadow: inset 18px 0 36px rgba(15,3,8,.26); }
+    .curtain.left::after,.curtain.right::after { content:""; position:absolute; top:0; bottom:0; width:2px; background:linear-gradient(180deg,transparent,var(--gold-light),transparent); opacity:.55; }
+    .curtain.left::after { right:0; } .curtain.right::after { left:0; }
+    .curtain.left::after,.curtain.right::after { opacity:.18; }
+    .skip-link { color:#eddbb9; text-underline-offset:4px; }
+
+    /* Utility header: compact monogram, clear controls, quiet sticky navigation. */
+    .topbar { height: 66px; padding: .55rem clamp(1rem,4.5vw,3rem); background: rgba(73,12,34,.97); color: var(--ivory); border-bottom: 1px solid rgba(239,217,168,.28); box-shadow: 0 5px 22px rgba(48,7,23,.08); backdrop-filter: blur(14px); }
+    .brand-mark { gap: .7rem; }
+    .brand-seal { width: 36px; height: 36px; border: 1px solid rgba(239,217,168,.72); border-radius: 50%; color: var(--gold-light); font-size: .88rem; }
+    .brand-name { font: 1.13rem var(--serif); letter-spacing: .01em; }
+    .brand-sub { color: #ddc7a4; font-size: .55rem; letter-spacing: .18em; }
+    .controls { gap: .45rem; }
+    .icon-control,.language-control { min-height: 36px; border: 1px solid rgba(239,217,168,.38); background: transparent; color: var(--ivory); border-radius: 2px; }
+    .icon-control { width: 36px; }
+    .icon-control[aria-pressed="true"],.language-control .active { color: var(--gold-light); background: rgba(239,217,168,.08); }
+    .nav-strip { position: sticky; top: 66px; z-index: 40; justify-content: center; flex-wrap: nowrap; padding: .45rem .8rem; gap: .25rem; background: rgba(251,246,238,.97); border-bottom: 1px solid #e6d8c4; box-shadow: 0 4px 18px rgba(60,20,35,.035); backdrop-filter: blur(12px); }
+    .nav-strip a { color: #67424d; font-size: .72rem; letter-spacing: .03em; padding: .42rem .8rem; border: 1px solid transparent; border-radius: 2px; }
+    .nav-strip a:hover,.nav-strip a:focus-visible { color: var(--wine); background: #f1e4d1; border-color: #d9c29a; }
+
+    /* Main hero: editorial split composition on desktop, full-bleed on mobile. */
+    .hero { isolation: isolate; display:flex; align-items:center; justify-content:flex-start; min-height: 670px; height: min(850px, calc(100svh - 100px)); padding: clamp(3rem,7vw,6.5rem) max(5vw, calc((100vw - 1180px)/2)); background: #4c1028; text-align:left; overflow:hidden; }
+    .hero::before { inset: 18px; z-index:1; border:1px solid rgba(239,217,168,.27); }
+    .hero::after { display:none; }
+    .hero-arch { display:none; }
+    .hero-visual-layer { z-index:-1; }
+    .hero-visual-layer img { opacity:.98; filter:saturate(.84) contrast(1.04); transform:translate3d(0,var(--scroll-shift,0px),0) scale(1.10); }
+    .hero-visual-layer::after { background:linear-gradient(90deg,rgba(66,8,30,.98) 0%,rgba(75,10,34,.94) 32%,rgba(77,14,36,.73) 49%,rgba(63,12,30,.22) 78%,rgba(46,7,22,.14) 100%),linear-gradient(0deg,rgba(42,5,21,.36),transparent 38%); }
+    .hero-inner { z-index:3; width:min(100%,610px); margin:0; text-align:left; }
+    .hero-kicker { color:#edcf91; margin:0 0 1.25rem; font-size:.66rem; letter-spacing:.2em; }
+    .hero-monogram { width:55px; height:55px; margin:0 0 1.45rem; border:1px solid rgba(239,217,168,.8); color:#f0d8a7; box-shadow:none; font-size:1.1rem; }
+    .hero h1 { color:#fff8eb; font-size:clamp(3.15rem,5.9vw,5.35rem); letter-spacing:-.055em; line-height:.86; max-width:780px; white-space:normal; }
+    .hero-and { color:#e3bb74; font-size:clamp(1.15rem,2.3vw,1.7rem); margin:.72rem 0 .75rem .35rem; }
+    .hero-hindi { color:#f1dfc6; font-size:clamp(1.05rem,2.5vw,1.42rem); margin:1.15rem 0 .2rem; }
+    .hero-date { display:inline-block; color:#f0d49d; font-size:.72rem; letter-spacing:.22em; padding-top:1rem; margin-top:1.25rem; border-top:1px solid rgba(239,217,168,.38); }
+    .hero-tagline { color:rgba(251,246,238,.84); font:italic 1.2rem var(--serif); margin:.8rem 0 0; }
+    .hero-scroll { margin-top:1.7rem; color:#f0d49d; font-size:.65rem; letter-spacing:.15em; }
+    .hero-scroll .arrow { width:30px; height:30px; border-color:rgba(239,217,168,.55); }
+    .petal { opacity:.16; background:linear-gradient(145deg,#f7dcaa,#b84245); }
+
+    /* Invitation becomes a two-column editorial spread, not a floating card. */
+    .invitation-section { background:var(--ivory); overflow:hidden; }
+    .invitation-section .section-inner { display:grid; grid-template-columns:minmax(0,1.02fr) minmax(300px,.98fr); align-items:center; gap:clamp(1.4rem,4vw,4rem); }
+    .invitation-paper { margin:0; max-width:none; padding:clamp(1.7rem,4vw,3.2rem); border:1px solid #dfcdb0; outline:5px solid rgba(190,151,86,.06); background:#fffdf8; box-shadow:0 24px 65px rgba(79,19,41,.055); text-align:left; }
+    .invitation-paper::before { content:"शुभ विवाह"; display:inline-block; margin-bottom:1rem; padding-bottom:.48rem; color:var(--vermillion); font:italic 1rem var(--serif); border-bottom:1px solid #d7bb89; }
+    .invitation-paper .section-title { max-width:520px; font-size:clamp(2.3rem,4.2vw,3.65rem); }
+    .invitation-paper .ornament-divider { margin:1.2rem 0; width:190px; justify-content:flex-start; }
+    .invitation-copy { font:1.13rem/1.78 var(--serif); color:#4f3a41; margin:1.15rem 0; }
+    .family-grid { grid-column:2; grid-row:1; display:grid; grid-template-columns:1fr; gap:1rem; margin:0; }
+    .family-card { position:relative; text-align:left; padding:1.2rem 1.35rem 1.25rem; background:transparent; border:0; border-left:2px solid #b74039; border-top:1px solid #e5d7c3; border-bottom:1px solid #e5d7c3; box-shadow:none; }
+    .family-card::before { display:none; }
+    .family-tag { color:var(--gold-dim); letter-spacing:.16em; font-size:.62rem; }
+    .family-card h3 { margin:.38rem 0 .12rem; color:var(--wine); font:500 1.95rem/1 var(--serif); }
+    .family-card p { color:var(--muted); font-size:.85rem; line-height:1.6; }
+    .hindi-family { color:#6e5159 !important; }
+
+    /* Countdown: message and live numbers share a horizontal rhythm. */
+    .countdown-section { background:linear-gradient(125deg,#4a0d25 0%,#65152f 58%,#471026 100%); color:var(--ivory); }
+    .countdown-section::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.16; background:radial-gradient(ellipse at 80% 30%,#c89e5f 0,transparent 32%),radial-gradient(ellipse at 12% 90%,#a83b43 0,transparent 30%); }
+    .countdown-section .section-inner { position:relative; display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); align-items:center; column-gap:clamp(2rem,6vw,6rem); }
+    .countdown-section .section-kicker { grid-column:1; grid-row:1; color:#e8c88b; }
+    .countdown-section .section-title { grid-column:1; grid-row:2; color:#fff8eb; font-size:clamp(2.5rem,4.6vw,4rem); }
+    .countdown-section .section-intro { grid-column:1; grid-row:3; color:#e2cfd0; margin:1rem 0 0; }
+    .countdown-wrap { grid-column:2; grid-row:1 / span 3; max-width:none; margin:0; padding:clamp(1.1rem,3vw,2rem); border:1px solid rgba(239,217,168,.44); background:rgba(30,4,15,.16); box-shadow:0 24px 50px rgba(25,0,10,.1); }
+    .countdown-label { color:#e9cc95; letter-spacing:.16em; font-size:.65rem; }
+    .countdown-event { color:#fff4df; font:500 clamp(1.6rem,3vw,2.25rem)/1.1 var(--serif); }
+    .countdown-grid { gap:0; border-top:1px solid rgba(239,217,168,.3); border-bottom:1px solid rgba(239,217,168,.3); }
+    .time-unit { padding:1rem .2rem; border:0; border-right:1px solid rgba(239,217,168,.22); background:transparent; }
+    .time-unit:last-child { border-right:0; }
+    .time-number { color:#fff9ef; font-size:clamp(1.7rem,4vw,2.75rem); }
+    .time-label { color:#dfc08c; letter-spacing:.12em; }
+    .countdown-date { color:#e7d8cb; }
+
+    /* Celebration gallery: image-led cards, with one featured wedding spread. */
+    .events-section { background:#f3e9db; }
+    .events-header { text-align:left; margin:0 0 2.1rem; max-width:760px; }
+    .events-header .section-intro { margin:.9rem 0 0; }
+    .events-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.35rem; max-width:1180px; perspective:none; }
+    .event-card { display:flex; flex-direction:column; min-width:0; min-height:0; border:1px solid #e1d1ba; border-radius:3px; padding:0; gap:0; background:#fffdf8; box-shadow:0 8px 28px rgba(70,18,37,.045); overflow:hidden; transform:translateY(18px); transition:opacity .7s ease,transform .7s cubic-bezier(.2,.65,.2,1),box-shadow .3s,border-color .3s; }
+    .event-card:hover { transform:translateY(-4px); box-shadow:0 18px 38px rgba(70,18,37,.10); border-color:#c7a56b; }
+    .event-card.featured { grid-column:1 / -1; display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr); background:#fffaf0; border-color:#c4a064; }
+    .event-card.featured::after { display:none; }
+    .event-art-wrap { position:relative; min-height:0; height:clamp(190px,24vw,295px); overflow:hidden; background:#63152d; }
+    .event-art { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; transform:scale(1.035) translate3d(0,var(--parallax-shift,0px),0); filter:saturate(.88) contrast(1.025); transition:transform .9s cubic-bezier(.2,.65,.2,1),filter .5s; will-change:transform; }
+    .event-card:hover .event-art { transform:scale(1.09) translate3d(0,var(--parallax-shift,0px),0); filter:saturate(.97) contrast(1.025); }
+    .event-art-wash { background:linear-gradient(180deg,rgba(30,8,15,.10),transparent 48%,rgba(30,8,15,.14)); }
+    .event-art-index { top:.85rem; left:.85rem; border:1px solid rgba(255,245,226,.7); background:rgba(70,10,31,.62); color:#fff5e2; backdrop-filter:blur(5px); border-radius:1px; padding:.3rem .46rem; font:.7rem var(--serif); }
+    .event-art-index i { color:#f0d8a8; }
+    .main-event-badge { color:#491126; background:#f0d6a0; border:1px solid #f5e3b5; top:.8rem; right:.8rem; padding:.33rem .5rem; font-size:.55rem; }
+    .event-art-symbol { display:none; }
+    .event-content { display:flex; flex-direction:column; padding:1.25rem 1.25rem 1.2rem; min-width:0; }
+    .event-date { align-self:flex-start; padding:0 0 .42rem; border:0; border-bottom:1px solid #ddc39a; background:transparent; color:#986b38; letter-spacing:.1em; font-size:.65rem; line-height:1.5; }
+    .event-title { margin:.6rem 0 .55rem; color:var(--wine); font:500 clamp(1.5rem,2.4vw,2rem)/1 var(--serif); letter-spacing:-.02em; }
+    .event-time { color:var(--vermillion); font-size:.78rem; margin:0 0 .5rem; }
+    .event-venue { align-items:flex-start; color:#6d5a60; font-size:.8rem; line-height:1.55; }
+    .event-venue svg { color:#aa7d45; }
+    .event-tagline { color:#9c7148; font:italic .96rem/1.4 var(--serif); margin:.65rem 0 0; }
+    .event-actions { display:flex; flex-wrap:wrap; gap:.45rem; padding-top:1rem; margin-top:auto; }
+    .small-action { min-height:35px; border:1px solid #d5bf96; border-radius:1px; padding:.42rem .6rem; color:var(--wine); background:transparent; font-size:.68rem; text-decoration:none; }
+    .small-action:hover { background:#f3e5d0; }
+    .event-card.featured .event-art-wrap { height:auto; min-height:360px; }
+    .event-card.featured .event-content { padding:clamp(1.5rem,3.5vw,3rem); justify-content:center; }
+    .event-card.featured .event-title { font-size:clamp(2.2rem,4.2vw,3.7rem); }
+    .event-card.featured .event-date { font-size:.72rem; }
+    .event-card.featured .event-tagline { font-size:1.05rem; }
+    .event-card.featured .event-venue { font-size:.88rem; }
+    .event-card:last-child:not(.featured) { grid-column:1 / -1; display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1fr); width:min(100%,860px); justify-self:center; }
+    .event-card:last-child:not(.featured) .event-art-wrap { height:auto; min-height:270px; }
+    .reveal.visible.event-card { opacity:1; transform:translateY(0); }
+    .event-note { text-align:left; margin:1.35rem 0 0; max-width:750px; font-size:.76rem; color:#76666a; }
+
+    /* Main wedding: one strong photograph with editorial copy beside it. */
+    .wedding-feature { position:relative; isolation:isolate; background:#38091e; color:var(--ivory); overflow:hidden; }
+    .wedding-scene-layer { z-index:-2; }
+    .wedding-scene-layer img { opacity:.27; filter:saturate(.78); transform:translate3d(0,var(--parallax-shift,0px),0) scale(1.08); animation:none; }
+    .wedding-feature::after { z-index:-1; background:linear-gradient(90deg,rgba(54,7,27,.92),rgba(68,9,31,.88) 55%,rgba(49,6,24,.91)); }
+    .wedding-feature-inner { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr); align-items:center; gap:clamp(2rem,5vw,5rem); width:min(100%,1180px); padding:clamp(4.5rem,9vw,7.5rem) clamp(1.2rem,3vw,2rem); text-align:left; }
+    .wedding-feature-inner::before { width:min(42%,520px); left:28%; top:9%; bottom:9%; border-color:rgba(239,217,168,.21); }
+    .mandap-3d-wrap { grid-column:1; grid-row:1; width:100%; max-width:660px; height:auto; aspect-ratio:4/5; max-height:610px; margin:0; overflow:visible; animation:none; perspective:none; }
+    .mandap-render { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; border:1px solid rgba(239,217,168,.6); border-radius:2px; box-shadow:0 26px 70px rgba(0,0,0,.32); transform:translate3d(0,var(--parallax-shift,0px),0) scale(1.02); filter:saturate(.84) contrast(1.04); }
+    .mandap-aura,.mandap-side,.mandap-plinth,.mandap-spark { display:none; }
+    .wedding-copy { grid-column:2; grid-row:1; position:relative; z-index:2; }
+    .wedding-feature .section-kicker { color:#e9cb91; }
+    .wedding-feature .section-title { color:#fff5e4; font-size:clamp(2.55rem,4.9vw,4.3rem); }
+    .wedding-feature .section-intro { color:#e2cdd1; margin:1rem 0 0; }
+    .wedding-meta { justify-content:flex-start; align-items:flex-start; gap:.65rem; color:#f0d8a8; margin:1.3rem 0; font-size:.82rem; }
+    .wedding-meta span { display:flex; align-items:center; gap:.45rem; }
+    .wedding-copy > p:not(.section-intro) { max-width:420px; margin:0 0 1.4rem !important; color:#e0c9cb !important; font-size:.86rem !important; }
+    .gold-button { min-height:46px; padding:.78rem 1.15rem; border:1px solid #f2dfb5; border-radius:1px; background:#ead19b; color:#4b1027; box-shadow:none; font-size:.78rem; }
+    .gold-button:hover { background:#f5e4bc; }
+
+    /* Venue information: numbered editorial panels with obvious wayfinding. */
+    .directions-section { background:var(--ivory); }
+    .directions-section .section-inner > .center { text-align:left; max-width:760px; }
+    .directions-section .section-intro { margin:.8rem 0 0; }
+    .venue-grid { gap:1.1rem; margin-top:2rem; }
+    .venue-card { position:relative; padding:1.7rem 1.6rem 1.55rem; border:1px solid #e4d5bf; border-top:3px solid var(--vermillion); background:#fffdf8; border-radius:2px; box-shadow:0 10px 32px rgba(70,18,37,.035); }
+    .venue-card::before { display:block; content:"01"; color:#cbb184; font:italic 2.1rem var(--serif); margin-bottom:1rem; }
+    .venue-card:nth-child(2)::before { content:"02"; }
+    .venue-icon { display:none; }
+    .venue-events { color:#9c723f; font-size:.61rem; letter-spacing:.14em; }
+    .venue-card h3 { margin:.4rem 0 .55rem; color:var(--wine); font:500 2.1rem/1 var(--serif); }
+    .venue-card p { color:#76656a; margin:.35rem 0 1.2rem; font-size:.86rem; }
+    .venue-card .small-action { display:inline-flex; align-items:center; gap:.45rem; min-height:39px; padding:.5rem .85rem; }
+    .map-disclaimer { text-align:left; margin:1rem 0 0; color:#817176; font-size:.75rem; }
+
+    /* A simple RSVP, visually separated from the rest of the invitation. */
+    .rsvp-section { background:linear-gradient(135deg,#4b0d26,#67142f 60%,#421023); color:var(--ivory); }
+    .rsvp-section::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.17; background:radial-gradient(circle at 14% 20%,#c39a61,transparent 20%),radial-gradient(circle at 85% 80%,#b54443,transparent 25%); }
+    .rsvp-frame { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); align-items:start; gap:clamp(1.5rem,5vw,4.5rem); max-width:1180px; margin:0 auto; padding:clamp(1.5rem,5vw,3.6rem); background:rgba(44,5,20,.17); border:1px solid rgba(239,217,168,.42); outline:5px solid rgba(239,217,168,.035); border-radius:2px; }
+    .rsvp-copy { grid-column:1; grid-row:1; text-align:left; }
+    .rsvp-form-panel { grid-column:2; grid-row:1 / span 3; min-width:0; }
+    .rsvp-visual { justify-content:flex-start; margin:0 0 1.4rem; gap:.7rem; }
+    .rsvp-ornament { color:#d8b879; }
+    .rsvp-monogram { border-color:rgba(239,217,168,.7); color:#f0dcaf; }
+    .rsvp-frame .section-title { color:#fff4e1; font-size:clamp(2.4rem,4.3vw,3.8rem); }
+    .rsvp-hindi { color:#e8c88d; font:1.15rem/1.6 var(--serif); margin:.9rem 0; }
+    .rsvp-frame .section-intro { color:#e1cdd0; margin:.7rem 0 0; }
+    .rsvp-form { max-width:none; margin:0; padding:1.4rem; gap:1rem; background:rgba(255,249,239,.055); border:1px solid rgba(239,217,168,.21); }
+    .form-field { gap:.45rem; color:#fff0d7; }
+    .form-field > span,.form-fieldset legend { color:#fff0d7; font-size:.8rem; }
+    .form-field b,.form-fieldset legend span { color:#d8b986; }
+    .form-field input,.form-field textarea,.form-field select { min-height:48px; border:1px solid #ddcba9; border-radius:2px; padding:.75rem .8rem; color:#40202b; background:#fffaf2; }
+    .form-field input:focus,.form-field textarea:focus,.form-field select:focus { border-color:#edcc86; box-shadow:0 0 0 3px rgba(239,217,168,.14); }
+    .choice-grid-simple { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.55rem; }
+    .choice-grid-simple .choice-card { min-height:66px; border-radius:2px; border-color:rgba(239,217,168,.33); padding:.65rem; color:#fff1da; background:rgba(255,255,255,.025); }
+    .choice-grid-simple .choice-card:has(input:checked) { border-color:#e5c88e; background:rgba(239,217,168,.11); }
+    .choice-grid-simple .choice-card small { color:#d8bd94; }
+    .choice-card input { accent-color:#be8e4a; }
+    .rsvp-privacy { color:#d9c8ca; padding:.65rem 0; border-left:0; border-top:1px solid rgba(239,217,168,.2); background:transparent; }
+    .whatsapp-button { width:100%; max-width:none; min-height:50px; background:var(--wine-2); border:1px solid #d9b76f; border-radius:2px; color:#fff5e5; box-shadow:0 8px 24px rgba(20,1,9,.12); }
+    .whatsapp-button:hover { background:#8b223d; }
+    .wa-icon { color:#f0d19a; }
+    .rsvp-form-status { color:#f2ddb3; }
+    .rsvp-fallback-link { color:#fff0d4; }
+    .contact-line { color:#e3c58e; font-size:.75rem; margin-top:1rem; }
+    .secondary-actions { justify-content:flex-start; margin-top:.9rem; }
+    .outline-button { border-color:rgba(239,217,168,.42); border-radius:2px; color:#f1ddba; }
+    .outline-button:hover { background:rgba(239,217,168,.1); }
+    .footer { background:#2e071a; color:#dfc08a; padding:2.3rem 1rem 2.5rem; border-top:1px solid rgba(239,217,168,.16); }
+    .footer small { color:#bda2a0; }
+    .floating-rsvp { background:var(--wine-2); border:1px solid #d8b574; border-radius:2px; color:#fff8ec; box-shadow:0 9px 28px rgba(60,8,28,.28); }
+    .toast { background:var(--wine); border-color:var(--gold); }
+
+    /* Responsive rules: every interaction remains thumb-friendly. */
+    @media (min-width: 1000px) {
+      .hero { padding-left:max(6vw,calc((100vw - 1180px)/2)); }
+      .event-card.featured .event-art-wrap { min-height:410px; }
+    }
+    @media (max-width: 900px) {
+      .hero { min-height:650px; height:min(800px,88svh); }
+      .invitation-section .section-inner { gap:1.6rem; }
+      .event-card.featured .event-art-wrap { min-height:315px; }
+      .wedding-feature-inner { gap:2rem; }
+      .rsvp-frame { gap:1.5rem; }
+    }
+    @media (max-width: 679px) {
+      .topbar { height:60px; padding-inline:.75rem; }
+      .brand-seal { width:32px; height:32px; font-size:.78rem; }
+      .brand-name { font-size:.98rem; }
+      .brand-sub { font-size:.49rem; letter-spacing:.12em; }
+      .controls { gap:.25rem; }
+      .icon-control { width:33px; min-height:33px; }
+      .language-control { padding:.35rem .48rem; min-height:33px; font-size:.7rem; }
+      .nav-strip { top:60px; justify-content:flex-start; padding:.42rem .6rem; }
+      .nav-strip a { padding:.42rem .65rem; font-size:.7rem; }
+      .hero { display:flex; align-items:center; min-height:calc(86svh - 55px); height:auto; padding:5rem 1.45rem 4.2rem; text-align:center; }
+      .hero::before { inset:12px; }
+      .hero-visual-layer img { object-position:58% center; }
+      .hero-visual-layer::after { background:linear-gradient(180deg,rgba(62,8,30,.54),rgba(69,11,32,.73) 44%,#4a0d26 100%),linear-gradient(90deg,rgba(53,7,25,.38),transparent,rgba(53,7,25,.3)); }
+      .hero-inner { width:100%; text-align:center; }
+      .hero-monogram { margin:0 auto 1.35rem; }
+      .hero h1 { font-size:clamp(3rem,12vw,4.3rem); line-height:.86; }
+      .hero-and { margin:.62rem 0; }
+      .hero-date { letter-spacing:.15em; font-size:.66rem; }
+      .hero-tagline { font-size:1.08rem; }
+      .hero-scroll { justify-content:center; margin-top:1.5rem; }
+      .section { padding:4rem 1.05rem; }
+      .section-title { font-size:clamp(2.4rem,10vw,3.25rem); }
+      .invitation-section .section-inner { display:flex; flex-direction:column; align-items:stretch; gap:1.7rem; }
+      .invitation-paper { padding:1.55rem 1.25rem; }
+      .invitation-paper .section-title { font-size:2.55rem; }
+      .invitation-copy { font-size:1.1rem; }
+      .family-grid { display:grid; grid-template-columns:1fr; gap:.65rem; }
+      .family-card { padding:1rem 1rem 1.05rem; }
+      .family-card h3 { font-size:1.8rem; }
+      .countdown-section .section-inner { display:block; }
+      .countdown-section .section-intro { margin-bottom:1.35rem; }
+      .countdown-wrap { padding:1rem .6rem; }
+      .countdown-event { font-size:1.65rem; }
+      .countdown-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+      .time-unit { padding:.82rem .1rem; }
+      .time-number { font-size:1.65rem; }
+      .time-label { font-size:.52rem; letter-spacing:.06em; }
+      .events-header { margin-bottom:1.35rem; }
+      .events-list { grid-template-columns:1fr; gap:1rem; }
+      .event-card,.event-card.featured,.event-card:last-child:not(.featured) { display:flex; flex-direction:column; grid-column:auto; width:100%; }
+      .event-art-wrap,.event-card.featured .event-art-wrap { display:block; width:100%; height:clamp(190px,58vw,275px); min-height:0; }
+      .event-content,.event-card.featured .event-content { padding:1.1rem 1rem 1.05rem; }
+      .event-title,.event-card.featured .event-title { font-size:1.9rem; }
+      .event-card.featured .event-date { font-size:.65rem; }
+      .event-venue,.event-card.featured .event-venue { font-size:.78rem; }
+      .event-actions { padding-top:.85rem; }
+      .small-action { min-height:36px; font-size:.68rem; padding:.4rem .55rem; }
+      .event-note { margin-top:1rem; }
+      .wedding-feature-inner { display:flex; flex-direction:column; align-items:stretch; gap:1.8rem; padding:4rem 1.1rem; text-align:left; }
+      .wedding-feature-inner::before { width:70%; left:50%; }
+      .mandap-3d-wrap { width:100%; max-width:none; aspect-ratio:4/3; max-height:none; }
+      .wedding-copy { width:100%; }
+      .wedding-feature .section-title { font-size:clamp(2.55rem,10vw,3.3rem); }
+      .wedding-meta { flex-direction:column; align-items:flex-start; gap:.6rem; }
+      .directions-section .section-inner > .center { text-align:left; }
+      .venue-grid { grid-template-columns:1fr; }
+      .venue-card { padding:1.35rem; }
+      .rsvp-frame { display:flex; flex-direction:column; gap:1.2rem; padding:1.25rem; }
+      .rsvp-copy { text-align:left; }
+      .rsvp-visual { margin-bottom:1rem; }
+      .rsvp-form-panel { width:100%; }
+      .rsvp-form { padding:1rem; }
+      .choice-grid-simple { grid-template-columns:1fr; }
+      .choice-grid-simple .choice-card { min-height:58px; }
+      .secondary-actions { justify-content:stretch; }
+      .outline-button { flex:1; }
+      .floating-rsvp { right:10px; bottom:max(10px,env(safe-area-inset-bottom)); min-height:43px; padding:.6rem .85rem; font-size:.75rem; }
+    }
+    @media (max-width: 370px) {
+      .brand-name { font-size:.88rem; }
+      .brand-sub { font-size:.45rem; }
+      .controls { gap:.16rem; }
+      .icon-control { width:30px; }
+      .language-control { padding:.3rem .38rem; }
+      .hero h1 { font-size:2.85rem; }
+      .event-title,.event-card.featured .event-title { font-size:1.7rem; }
+    }
+    @media (hover:none) {
+      .event-card:hover { transform:none; box-shadow:0 8px 28px rgba(70,18,37,.045); }
+      .event-card:hover .event-art { transform:scale(1.035) translate3d(0,var(--parallax-shift,0px),0); }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+      .hero-visual-layer img,.wedding-scene-layer img,.event-art,.mandap-render { transform:none !important; }
+      .event-card,.reveal { opacity:1 !important; transform:none !important; }
+    }
+
   </style>
 </head>
 <body class="locked">
@@ -487,13 +829,13 @@
     <div class="intro-halo"></div>
     <div class="intro-arch" aria-hidden="true"></div>
     <div class="intro-content">
-      <div class="eyebrow intro-sub" data-i18n="introKicker">A ROYAL CELEBRATION</div>
+      <div class="eyebrow intro-sub" data-i18n="introKicker">A CELEBRATION OF TWO FAMILIES</div>
       <div class="intro-seal" aria-hidden="true">S <span style="font-style:italic;color:#f0d79c">+</span> S</div>
       <h1 class="intro-heading">Shivam<br><span style="font-style:italic;color:#d3af6a;font-size:.58em">&amp;</span><br>Shweta</h1>
       <p class="intro-sub" data-i18n="introCaption">A beautiful new chapter begins</p>
-      <button class="open-button" id="openInvitation" type="button">
-        <strong data-i18n="openInvite">Open Invitation</strong>
-        <span>निमंत्रण खोलें</span>
+      <button class="open-button" id="openInvitation" type="button" aria-label="Tap to open the wedding invitation">
+        <strong data-i18n="openInvite">Tap to Open</strong>
+        <span data-i18n="openInviteHindi">निमंत्रण खोलें</span>
       </button>
     </div>
     <div class="curtain left"></div><div class="curtain right"></div>
@@ -506,7 +848,7 @@
       <span><span class="brand-name">Shivam <span style="color:var(--gold)">&amp;</span> Shweta</span><span class="brand-sub" data-i18n="brandSub">Sunehri Shaam</span></span>
     </a>
     <div class="controls">
-      <button class="icon-control" id="musicToggle" type="button" aria-label="Play ambient melody" aria-pressed="false" title="Optional ambient melody">♫</button>
+      <button class="icon-control" id="musicToggle" type="button" aria-label="Play ambient melody" aria-pressed="false" title="Play or pause the wedding melody">♫</button>
       <button class="language-control" id="languageToggle" type="button" aria-label="Switch language"><span id="enLabel" class="active">EN</span><span class="divider">/</span><span id="hiLabel">हिंदी</span></button>
       <button class="icon-control" id="shareButton" type="button" aria-label="Share invitation" title="Share invitation">↗</button>
     </div>
@@ -605,6 +947,7 @@
           <div class="mandap-plinth"></div>
           <span class="mandap-spark mandap-spark-one">✦</span><span class="mandap-spark mandap-spark-two">✧</span>
         </div>
+        <div class="wedding-copy">
         <p class="eyebrow section-kicker" data-i18n="weddingKicker">THE MOST CHERISHED MOMENT</p>
         <h2 class="section-title" data-i18n="weddingTitle">The Wedding of Shivam & Shweta</h2>
         <p class="section-intro" data-i18n="weddingIntro">A promise for a lifetime, celebrated with the blessings of family and friends.</p>
@@ -614,6 +957,7 @@
         </div>
         <p style="max-width:500px;margin:0 auto 1.4rem;color:#dfc9c6;font-size:.88rem">Chainpur, Babhani, Sonbhadra, Uttar Pradesh</p>
         <a class="gold-button" href="https://www.google.com/maps/search/?api=1&query=Chainpur%2C%20Babhani%2C%20Sonbhadra%2C%20Uttar%20Pradesh" target="_blank" rel="noopener" data-i18n="weddingDirections">Find the wedding venue ↗</a>
+        </div>
       </div>
     </section>
 
@@ -647,11 +991,14 @@
     <section class="section rsvp-section" id="rsvp">
       <div class="petals" aria-hidden="true"><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i></div>
       <div class="rsvp-frame reveal">
+        <div class="rsvp-copy">
         <div class="rsvp-visual" aria-hidden="true"><span class="rsvp-ornament">❧</span><span class="rsvp-monogram">S <i>+</i> S</span><span class="rsvp-ornament">❧</span></div>
         <p class="eyebrow section-kicker" data-i18n="rsvpKicker">YOUR PRESENCE IS OUR GREATEST BLESSING</p>
         <h2 class="section-title" data-i18n="rsvpTitle">Let's celebrate together</h2>
         <p class="rsvp-hindi">आपकी उपस्थिति और शुभाशीष हमारे लिए अनमोल हैं।</p>
         <p class="section-intro" data-i18n="rsvpIntro">We look forward to celebrating these precious moments with you. Please let us know if you can join us.</p>
+        </div>
+        <div class="rsvp-form-panel">
         <form id="rsvpForm" class="rsvp-form">
           <label class="form-field" for="guestName">
             <span>Your name <b>/ आपका नाम</b> <em>*</em></span>
@@ -680,6 +1027,7 @@
           <button class="outline-button" id="downloadWeddingCalendar" type="button"><span data-i18n="saveWeddingDate">Save wedding date</span> ↓</button>
           <button class="outline-button" id="shareBottom" type="button"><span data-i18n="shareInvite">Share invitation</span> ↗</button>
         </div>
+        </div>
       </div>
     </section>
   </main>
@@ -703,7 +1051,7 @@
 
       const copy = {
         en: {
-          introKicker:'A ROYAL CELEBRATION', introCaption:'A beautiful new chapter begins', openInvite:'Open Invitation', skipIntro:'Skip opening ↗', brandSub:'Sunehri Shaam',
+          introKicker:'A CELEBRATION OF TWO FAMILIES', introCaption:'A beautiful new chapter begins', openInvite:'Tap to Open', openInviteHindi:'निमंत्रण खोलें', skipIntro:'Skip opening ↗', brandSub:'Sunehri Shaam',
           navInvitation:'Invitation', navCountdown:'Countdown', navEvents:'Celebrations', navVenues:'Venues', navRSVP:'RSVP',
           heroKicker:'WITH THE BLESSINGS OF OUR FAMILIES', and:'and', heroTagline:'A beautiful new chapter begins', discover:'DISCOVER THE CELEBRATION',
           invitationKicker:'YOU ARE CORDIALLY INVITED · सादर आमंत्रण', invitationTitle:'A celebration of love & family',
@@ -723,7 +1071,7 @@
           openCalendar:'Save wedding date', sharingTitle:'Shivam Raj Sahu & Shweta Gupta — Wedding Invitation', shareText:'Join us in celebrating Shivam Raj Sahu and Shweta Gupta in November 2026.'
         },
         hi: {
-          introKicker:'एक शाही उत्सव', introCaption:'एक खूबसूरत नए अध्याय की शुरुआत', openInvite:'निमंत्रण खोलें', skipIntro:'प्रारंभ छोड़ें ↗', brandSub:'सुनहरी शाम',
+          introKicker:'दो परिवारों का उत्सव', introCaption:'एक खूबसूरत नए अध्याय की शुरुआत', openInvite:'खोलने के लिए टैप करें', openInviteHindi:'Tap to open invitation', skipIntro:'प्रारंभ छोड़ें ↗', brandSub:'सुनहरी शाम',
           navInvitation:'निमंत्रण', navCountdown:'उलटी गिनती', navEvents:'समारोह', navVenues:'स्थान', navRSVP:'जवाब दें',
           heroKicker:'परिवारों के आशीर्वाद सहित', and:'एवं', heroTagline:'एक खूबसूरत नए अध्याय की शुरुआत', discover:'समारोह की झलक देखें',
           invitationKicker:'सादर आमंत्रण · YOU ARE CORDIALLY INVITED', invitationTitle:'प्रेम और परिवार का उत्सव',
@@ -896,7 +1244,7 @@
         if (!AudioCtx) { showToast(language === 'hi' ? 'इस ब्राउज़र में ऑडियो उपलब्ध नहीं है।' : 'Audio is not available in this browser.'); return false; }
         audioContext = audioContext || new AudioCtx();
         if (audioContext.state === 'suspended') audioContext.resume();
-        const master = audioContext.createGain(); master.gain.value = 0.075; master.connect(audioContext.destination); musicNodes.push(master);
+        const master = audioContext.createGain(); master.gain.setValueAtTime(0.0001, audioContext.currentTime); master.gain.exponentialRampToValueAtTime(0.10, audioContext.currentTime + 1.25); master.connect(audioContext.destination); musicNodes.push(master);
         const filter = audioContext.createBiquadFilter(); filter.type = 'lowpass'; filter.frequency.value = 1700; filter.connect(master); musicNodes.push(filter);
         const drone1 = audioContext.createOscillator(); drone1.type = 'triangle'; drone1.frequency.value = 146.83;
         const drone2 = audioContext.createOscillator(); drone2.type = 'sine'; drone2.frequency.value = 220;
@@ -1008,14 +1356,36 @@ With regards.`;
         paint();
       }
 
-      function openIntro() {
-        const intro = $('#intro'); if (intro.classList.contains('is-opening') || intro.classList.contains('is-open')) return;
-        intro.classList.add('is-opening'); document.body.classList.remove('locked');
-        setTimeout(() => { intro.classList.add('is-open'); intro.setAttribute('aria-hidden','true'); }, 750);
+      function openIntro(fromUserGesture = false) {
+        const intro = $('#intro');
+        if (intro.classList.contains('is-opening') || intro.classList.contains('is-open')) return;
+
+        // Start audio from the opening tap. Browsers block audible autoplay before a user gesture.
+        if (fromUserGesture && !musicOn && startAmbientMusic()) {
+          const musicButton = $('#musicToggle');
+          musicButton.setAttribute('aria-pressed', 'true');
+          musicButton.setAttribute('aria-label', 'Pause ambient melody');
+          musicButton.textContent = 'Ⅱ';
+        }
+
+        intro.classList.add('is-opening');
+        document.body.classList.remove('locked');
+
+        // Scroll the page behind the curtain to the couple's hero section while the curtains part.
+        // When the overlay fades, guests land directly on the invitation rather than the nav bars.
+        const hero = $('#home');
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const heroTop = Math.max(0, hero.getBoundingClientRect().top + window.scrollY);
+        requestAnimationFrame(() => window.scrollTo({ top: heroTop, behavior: reducedMotion ? 'auto' : 'smooth' }));
+
+        setTimeout(() => {
+          intro.classList.add('is-open');
+          intro.setAttribute('aria-hidden', 'true');
+        }, 750);
       }
-      $('#openInvitation').addEventListener('click', openIntro);
-      $('#skipIntro').addEventListener('click', openIntro);
-      window.addEventListener('keydown', event => { if (event.key === 'Escape') openIntro(); });
+      $('#openInvitation').addEventListener('click', () => openIntro(true));
+      $('#skipIntro').addEventListener('click', () => openIntro(true));
+      window.addEventListener('keydown', event => { if (event.key === 'Escape') openIntro(true); });
 
       const floating = $('#floatingRsvp');
       let rsvpIsVisible = false;
@@ -1027,8 +1397,7 @@ With regards.`;
       } else { window.addEventListener('scroll', updateFloatingRsvp, { passive: true }); updateFloatingRsvp(); }
 
       initReveal(); renderEvents(); updateCountdown(); initScrollMotion();
-      // Small convenience: retain the invitation rather than reopening it on refresh in this tab.
-      try { if (sessionStorage.getItem('sunehriOpened') === 'yes') openIntro(); sessionStorage.setItem('sunehriOpened','yes'); } catch {}
+      // The invitation curtain is intentionally shown on each fresh page load.
     })();
   </script>
 </body>
